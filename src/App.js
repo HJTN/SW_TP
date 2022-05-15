@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Routes, Link } from "react-router-dom";
+import Join from "./Join";
+import Login from "./Login";
+import JoinFin from "./JoinFin";
+import Certify from './Certify';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" exact element={<Login />} />
+      <Route path="/Join" exact element={<Join />} />
+      <Route path="/JoinFin" exact element={<JoinFin />} />
+      <Route path="/Certify" exact element={<Certify />} />
+    </Routes>
   );
 }
 
