@@ -1,0 +1,103 @@
+.login {
+    position: absolute;
+    width: 209px;
+    height: 87px;
+    left: 52px;
+    top: 124px;
+  
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.165px;
+  
+    color: #000000;
+  }
+  
+  .id {
+    position: absolute;
+    width: 250px;
+    height: 29px;
+    left: 90px;
+    top: 274px;
+  
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 11px;
+    text-align: left;
+    letter-spacing: -0.165px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  
+    color: #979797;
+  }
+  
+  .password {
+    position: absolute;
+    width: 250px;
+    height: 29px;
+    left: 90px;
+    top: 315px;
+  
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 11px;
+    text-align: left;
+    letter-spacing: -0.165px;
+  
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  
+    color: #979797;
+  }
+  
+  .loginBtn {
+    position: absolute;
+    font-family: 'Inter';
+    width: 271px;
+    height: 29px;
+    left: 84px;
+    top: 390px;
+    color: white;
+  
+    background: #FF897B;
+    border: none;
+    border-radius: 5px;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 6px 0px;
+  }
+  
+  .joinBtn {
+    position: absolute;
+    width: 271px;
+    height: 29px;
+    left: 84px;
+    top: 427px;
+    color: white;
+  
+    background: #FFE4E1;
+    border-radius: 5px;
+    border: none;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 6px 0px;
+  }
+  
