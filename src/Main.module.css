@@ -1,0 +1,29 @@
+.Mainbox { 
+    width: 300px; 
+    height: 55px; 
+    Top:-20px;
+    background: #FFE4E1;
+}
+
+.Title{
+    position: absolute;
+    font-family: Roboto;
+    font-size: 21px;
+    font-weight: normal;
+    font-style: normal;
+    align-items: center;   
+    Width:200px;
+    height: 40px;
+    Left: 125px;
+    Top: 3px;
+}
+
+.Icon{
+    position: absolute;
+    color: #FF897B;
+    width: 240px;
+    height: 87px;
+    left: 270px;
+    align-items: center;
+    top: 28px;
+}

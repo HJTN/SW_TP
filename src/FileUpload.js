@@ -36,7 +36,6 @@ function FileUpload(props)
                     }} 
                     {...getRootProps()}>
                     <input {...getInputProps()} />
-                    
                 </div>
             )}
             </Dropzone>

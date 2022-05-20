@@ -14,7 +14,7 @@
     align-items: center;   
     Width:200px;
     height: 40px;
-    Left: 120px;
+    Left: 125px;
     Top: 3px;
 }
 
@@ -32,7 +32,7 @@
 
 .WriteTitle{
     position: absolute;
-    width: 250px;
+    width: 300px;
 
     font-family: Roboto;
     font-style: normal;

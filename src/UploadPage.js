@@ -2,10 +2,12 @@ import React, {useState} from 'react';
 import useForm from 'react-hook-form';
 import FileUpload from './FileUpload';
 import styles from "./UploadPage.module.css";
+import Navbar from './Navbar';
 
 function UploadPage() 
 {
     const [Title, setTitle] = useState("")
+    const [Body, setBody] = useState("")
     const [Images, setImages] = useState([])
 
     const titleChangeHandler = (event) => {
@@ -26,9 +28,12 @@ function UploadPage()
             <form>
                 <FileUpload refreshFunction={updateImages} />
                 <br />
+                <input className={styles.WriteTitle} placeholder="글 제목.." value={Title}/> 
                 <br />
-                <input className={styles.WriteTitle} placeholder="글 제목.." value={Title}/>            
+                <br />
+                <textarea style={{width: 300, height: 200}}>상세정보..</textarea>
             </form>
+            <Navbar />
         </div>
     )
 }

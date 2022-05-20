@@ -5,6 +5,8 @@ import Login from "./Login";
 import JoinFin from "./JoinFin";
 import Certify from './Certify';
 import UploadPage from "./UploadPage";
+import Main from "./Main";
+import Search from "./Search";
 
 function App() {
   return (
@@ -14,7 +16,8 @@ function App() {
       <Route path="/JoinFin" exact element={<JoinFin />} />
       <Route path="/Certify" exact element={<Certify />} />
       <Route path="/UploadPage" exact element={<UploadPage />} />
-    
+      <Route path="/Main" exact element={<Main />} />
+      <Route path="/Search" exact element={<Search />} />
     </Routes>
   );
 }
