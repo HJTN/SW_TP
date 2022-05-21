@@ -1,0 +1,182 @@
+.join {
+    position: absolute;
+    width: 209px;
+    height: 87px;
+    left: 52px;
+    top: 124px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.165px;
+
+    color: #000000;
+}
+
+.nickname {
+    position: absolute;
+    width: 250px;
+    height: 29px;
+    left: 90px;
+    top: 274px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 11px;
+    text-align: left;
+    letter-spacing: -0.165px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    color: #979797;
+}
+
+.id {
+    position: absolute;
+    width: 250px;
+    height: 29px;
+    left: 90px;
+    top: 315px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 11px;
+    text-align: left;
+    letter-spacing: -0.165px;
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    color: #979797;
+
+}
+
+.password {
+    position: absolute;
+    width: 250px;
+    height: 29px;
+    left: 90px;
+    top: 356px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 11px;
+    text-align: left;
+    letter-spacing: -0.165px;
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    color: #979797;
+
+}
+
+.password2 {
+    position: absolute;
+    width: 250px;
+    height: 29px;
+    left: 90px;
+    top: 397px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 11px;
+    text-align: left;
+    letter-spacing: -0.165px;
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    color: #979797;
+
+}
+
+.Btn {
+    position: absolute;
+    width: 271px;
+    height: 29px;
+    left: 84px;
+    top: 472px;
+    color: white;
+
+    background: #FF897B;
+    border: none;
+    border-radius: 5px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 6px 0px;
+}
+
+.check {
+    position: absolute;
+    width: 60px;
+    height: 13px;
+    left: 291px;
+    top: 283px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 10px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: -0.165px;
+
+    border: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+
+    background-color: transparent;
+
+    color: #FF897B;
+}
+
+.checkid {
+    position: absolute;
+    width: 60px;
+    height: 23px;
+    left: 291px;
+    top: 315px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9px;
+    line-height: 11px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: -0.165px;
+
+    border: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+
+    background-color: transparent;
+
+    color: #FF897B;
+}

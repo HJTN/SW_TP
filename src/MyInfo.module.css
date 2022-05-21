@@ -1,0 +1,56 @@
+.Mainbox { 
+    width: 300px; 
+    height: 55px; 
+    Top:-20px;
+    background: #FFE4E1;
+}
+
+.Title{
+    position: absolute;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    align-items: center;   
+    Width:200px;
+    height: 40px;
+    Left: 125px;
+    Top: 3px;
+}
+
+.Backicon{
+    position: absolute;
+    color: #FF897B;
+    width: 240px;
+    height: 87px;
+    left: 28px;
+    align-items: center;
+    top: 28px;
+}
+
+.Searchicon{
+    position: absolute;
+    color: #FF897B;
+    width: 240px;
+    height: 87px;
+    left: 270px;
+    align-items: center;
+    top: 28px;
+}
+
+.Userbox{
+    position: absolute;
+    width: 300px; 
+    height: 180px; 
+    Top: 63px;
+    background: #F8B2AA;
+}
+
+.Usericon{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    left: 25px;
+    align-items: center;
+    top: 42px;
+}

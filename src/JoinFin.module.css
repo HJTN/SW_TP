@@ -1,0 +1,40 @@
+.font{
+    position: absolute;
+    width: 240px;
+    height: 87px;
+    left: 105px;
+    top: 315px;
+    font-family: Roboto;
+    font-weight: normal;
+    font-style: normal;
+    align-items: center;
+    font-size: 18px;
+}
+
+.Icon{
+    position: absolute;
+    width: 240px;
+    height: 87px;
+    left: 205px;
+    align-items: center;
+    top: 306px;
+}
+.LoginBtn {
+    position: absolute;
+    width: 271px;
+    height: 29px;
+    left: 84px;
+    top: 420px;
+    color: white;
+
+    background: #FF897B;
+    border: none;
+    border-radius: 5px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 6px 0px;
+}
