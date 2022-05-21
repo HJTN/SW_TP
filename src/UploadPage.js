@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import useForm from 'react-hook-form';
+import {Link} from 'react-router-dom';
+import { FaSearch, FaChevronLeft } from "react-icons/fa";
 import FileUpload from './FileUpload';
 import styles from "./UploadPage.module.css";
 import Navbar from './Navbar';
@@ -23,6 +25,12 @@ function UploadPage()
             <div className={styles.box}>
             <h2 className={styles.Title}>공유하기</h2>
             </div>
+            <Link to={'/Main'}>
+                <div className={styles.Backicon}><FaChevronLeft /></div>
+            </Link>
+            <Link to={'/Search'}>
+                <div className={styles.Searchicon}><FaSearch /></div>
+            </Link>
             <br/>
             <button className={styles.RegisterBtn}>등록</button>
             <form>

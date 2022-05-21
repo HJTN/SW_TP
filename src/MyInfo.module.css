@@ -1,4 +1,4 @@
-.box { 
+.Mainbox { 
     width: 300px; 
     height: 55px; 
     Top:-20px;
@@ -16,19 +16,6 @@
     height: 40px;
     Left: 125px;
     Top: 3px;
-}
-
-.RegisterBtn{
-    position: relative;
-    top: -10px;
-    Width:65px;
-    height: 23px;
-    Left:235px;
-    background: #FF897B;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-family: Roboto;
 }
 
 .Backicon{
@@ -51,19 +38,19 @@
     top: 28px;
 }
 
-.WriteTitle{
+.Userbox{
     position: absolute;
-    width: 300px;
+    width: 300px; 
+    height: 180px; 
+    Top: 63px;
+    background: #F8B2AA;
+}
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 11px;
-    text-align: left;
-    letter-spacing: -0.165px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    color: #979797;
+.Usericon{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    left: 25px;
+    align-items: center;
+    top: 42px;
 }

@@ -8,13 +8,17 @@ function Navbar()
     return(
         <nav className={styles.wrapper}>
             <div>
-            <span className={styles.Icon1}><FaLayerGroup /></span>
-            <Link to='/UploadPage'>
-                <span className={styles.Icon2}><FaRegFile /></span>
+            <Link to='/Main'>
+                <span className={styles.Icon1}><FaLayerGroup size="2em"/></span>
             </Link>
-            <span className={styles.Icon3}><FaTelegramPlane /></span>
-            <span className={styles.Icon4}><FaRegHeart /></span>
-            <span className={styles.Icon5}><FaRegUser /></span>
+            <Link to='/UploadPage'>
+                <span className={styles.Icon2}><FaRegFile size="2em"/></span>
+            </Link>
+            <span className={styles.Icon3}><FaTelegramPlane size="2em"/></span>
+            <span className={styles.Icon4}><FaRegHeart size="2em"/></span>
+            <Link to='/MyInfo'>
+                <span className={styles.Icon5}><FaRegUser size="2em"/></span>
+            </Link>
             </div>
         </nav>
     )

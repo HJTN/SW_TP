@@ -29,28 +29,35 @@
 
 .Icon1 {
     position: absolute;
-    left: 50px;
+    left: 30px;
+    bottom: 3px;
+    color: #C4C4C4;
 }
 
 .Icon2 {
     position: absolute;
-    left: 100px;
+    left: 90px;
+    bottom: 3px;
     color: #C4C4C4;
 }
 
 .Icon3 {
     position: absolute;
     left: 150px;
+    bottom: 3px;
 }
 
 .Icon4 {
     position: absolute;
-    left: 200px;
+    left: 210px;
+    bottom: 3px;
 }
 
 .Icon5 {
     position: absolute;
-    left: 250px;
+    left: 270px;
+    color: #C4C4C4;
+    bottom: 3px;
 }
 
 
