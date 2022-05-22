@@ -1,0 +1,45 @@
+.Mainbox { 
+    width: 300px; 
+    height: 55px; 
+    Top:-20px;
+    background: #FFE4E1;
+}
+
+.Title{
+    position: absolute;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    align-items: center;
+    Width:200px;
+    height: 40px;
+    Left: 125px;
+    Top: 3px;
+}
+
+.Icon{
+    position: absolute;
+    color: #FF897B;
+    width: fit-content;
+    height: fit-content;
+    left: 270px;
+    align-items: center;
+    top: 28px;
+}
+
+.Register{
+    position: relative;
+    top: 70px;
+    left: 235px;
+    width: 60px;
+    height: 20px;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: #FF897B;
+    border-style: none;
+    border-color: white;
+}

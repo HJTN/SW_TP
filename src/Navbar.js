@@ -14,7 +14,9 @@ function Navbar()
             <Link to='/UploadPage'>
                 <span className={styles.Icon2}><FaRegFile size="2em"/></span>
             </Link>
-            <span className={styles.Icon3}><FaTelegramPlane size="2em"/></span>
+            <Link to='/Center'>
+                <span className={styles.Icon3}><FaTelegramPlane size="2em"/></span>
+            </Link>
             <span className={styles.Icon4}><FaRegHeart size="2em"/></span>
             <Link to='/MyInfo'>
                 <span className={styles.Icon5}><FaRegUser size="2em"/></span>
