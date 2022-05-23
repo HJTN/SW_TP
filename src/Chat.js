@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './Chat.module.css';
 import { FaSearch } from "react-icons/fa";
 import Navbar from './Navbar';
-function Main() 
+function Chat() 
 {
 
     return (
@@ -22,4 +22,4 @@ function Main()
     )
 }
 
-export default Main;
+export default Chat;

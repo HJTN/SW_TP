@@ -1,42 +1,136 @@
-.Mainbox { 
-    width: 300px; 
-    height: 55px; 
-    Top:-20px;
+.Mainbox {
+    position: absolute;
+    left: 0px;
+    top: -20px;
+    width: 320px;
+    height: 55px;
     background: #FFE4E1;
 }
 
 .Title{
     position: absolute;
+    Left: 120px;
+    top: 7px;
+    Width: fit-content;
+    height: fit-content;
     font-family: Roboto;
     font-size: 20px;
     font-weight: bold;
     font-style: normal;
     align-items: center;
-    Width:200px;
-    height: 40px;
-    Left: 125px;
-    Top: 3px;
 }
 
 .Icon{
     position: absolute;
-    color: #FF897B;
+    right: 20px;
+    bottom: 5px;
     width: fit-content;
     height: fit-content;
-    left: 270px;
+    color: #FF897B;
     align-items: center;
-    top: 28px;
 }
 
-.loadMore{
-    position: relative;
-    top: 70px;
-    left: 235px;
+.notifyListBox{
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    left: 20px;
+    top: 100px;
+}
+
+.notifyTitle{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    margin: unset;
+    background-color: unset;
+    font-family: Roboto;
+    font-size: 25px;
+    color: #FF897B;
+}
+
+.notifyMore{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
     width: 60px;
     height: 20px;
-    border-radius: 5px;
+    border-style: none;
     font-family: Roboto;
     font-size: 12px;
     font-weight: bold;
-    background-color: white;
+    color: #FF897B;
+    background-color: unset;
+}
+
+.questionListBox{
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    left: 20px;
+    top: 400px;
+}
+
+.questionTitle{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    margin: unset;
+    background-color: unset;
+    font-family: Roboto;
+    font-size: 25px;
+    color: #FF897B;
+}
+
+.questionMore{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 60px;
+    height: 20px;
+    border-style: none;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FF897B;
+    background-color: unset;
+}
+
+.startQuestionBox{
+    position: absolute;
+    bottom: 100px;
+    left: 70px;
+    width: 200px;
+    height: 60px;
+}
+
+.startQuestion{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 60px;
+    padding-right: 50px;
+    font-family: Roboto;
+    font-size: 15px;
+    color: white;
+    border-radius: 5px;
+    background-color: #FF897B;
+}
+
+.speakerIcon{
+    position: absolute;
+    left: 35px;
+    top: 12px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.runningText{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    font-size: 10px;
+    color: #FF897B;
 }
