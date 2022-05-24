@@ -1,5 +1,4 @@
 .Mainbox {
-    position: absolute;
     left: 0px;
     top: -20px;
     width: 320px;
@@ -7,10 +6,20 @@
     background: #FFE4E1;
 }
 
+.backIcon{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 28px;
+    color: #FF897B;
+    align-items: center;
+}
+
 .Title{
     position: absolute;
-    Left: 120px;
-    top: 7px;
+    Left: 125px;
+    top: 5px;
     Width: fit-content;
     height: fit-content;
     font-family: Roboto;
@@ -20,10 +29,10 @@
     align-items: center;
 }
 
-.Icon{
+.searchIcon{
     position: absolute;
-    right: 20px;
-    bottom: 5px;
+    left: 280px;
+    top: 28px;
     width: fit-content;
     height: fit-content;
     color: #FF897B;
@@ -47,6 +56,50 @@
     font-family: Roboto;
     font-size: 25px;
     color: #FF897B;
+}
+
+.notifyItem1{
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    width: 210px;
+    height: 30px;
+    text-align: left;
+    background-color: unset;
+    border-bottom: 2px solid #FFE4E1;
+}
+
+.notifyItem2{
+    position: absolute;
+    left: 30px;
+    top: 110px;
+    width: 210px;
+    height: 30px;
+    text-align: left;
+    background-color: unset;
+    border-bottom: 2px solid #FFE4E1;
+}
+
+.notifyItem3{
+    position: absolute;
+    left: 30px;
+    top: 160px;
+    width: 210px;
+    height: 30px;
+    text-align: left;
+    background-color: unset;
+    border-bottom: 2px solid #FFE4E1;
+}
+
+.notifyItem4{
+    position: absolute;
+    left: 30px;
+    top: 210px;
+    width: 210px;
+    height: 30px;
+    text-align: left;
+    background-color: unset;
+    border-bottom: 2px solid #FFE4E1;
 }
 
 .notifyMore{
@@ -80,6 +133,50 @@
     font-family: Roboto;
     font-size: 25px;
     color: #FF897B;
+}
+
+.questionItem1{
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    width: 210px;
+    height: 30px;
+    text-align: left;
+    background-color: unset;
+    border-bottom: 2px solid #FFE4E1;
+}
+
+.questionItem2{
+    position: absolute;
+    left: 30px;
+    top: 110px;
+    width: 210px;
+    height: 30px;
+    text-align: left;
+    background-color: unset;
+    border-bottom: 2px solid #FFE4E1;
+}
+
+.questionItem3{
+    position: absolute;
+    left: 30px;
+    top: 160px;
+    width: 210px;
+    height: 30px;
+    text-align: left;
+    background-color: unset;
+    border-bottom: 2px solid #FFE4E1;
+}
+
+.questionItem4{
+    position: absolute;
+    left: 30px;
+    top: 210px;
+    width: 210px;
+    height: 30px;
+    text-align: left;
+    background-color: unset;
+    border-bottom: 2px solid #FFE4E1;
 }
 
 .questionMore{
@@ -121,8 +218,8 @@
 
 .speakerIcon{
     position: absolute;
-    left: 35px;
-    top: 12px;
+    left: 30px;
+    top: 8px;
     width: fit-content;
     height: fit-content;
 }
