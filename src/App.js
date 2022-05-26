@@ -10,6 +10,8 @@ import Search from "./Search";
 import MyInfo from "./MyInfo";
 import Center from "./Center";
 import Chat from "./Chat";
+import Noti from "./Noti";
+import Question from "./Question";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
       <Route path="/MyInfo" exact element={<MyInfo />} />
       <Route path="/Center" exact element={<Center />}/>
       <Route path="/Chat" exact element={<Chat />}/>
+      <Route path="/Noti" exact element={<Noti />}/>
+      <Route path="/Question" exact element={<Question />}/>
     </Routes>
   );
 }
