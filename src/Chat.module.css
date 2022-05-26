@@ -1,7 +1,7 @@
-.Mainbox { 
+.Mainbox {
+    position: fixed;
     width: 300px; 
-    height: 55px; 
-    Top:-20px;
+    height: 55px;
     background: #FFE4E1;
 }
 
@@ -10,7 +10,7 @@
     width: 20px;
     height: 20px;
     left: 28px;
-    top: 28px;
+    top: 18px;
     align-items: center;
     color: #FF897B;
 }
@@ -25,11 +25,11 @@
     width: fit-content;
     height: fit-content;
     Left: 140px;
-    Top: 5px;
+    Top: -4px;
 }
 
 .registerBox{
-    position: absolute;
+    position: fixed;
     bottom: 80px;
     left: 20px;
     width: 280px;
@@ -45,7 +45,9 @@
     left: 15px;
     width: 180px;
     height: 20px;
-    border-bottom: 1px solid #c4c4c4;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #FF897B;
 }
 
 .registerBtn{
@@ -62,4 +64,32 @@
     background-color: #FF897B;
     border-style: none;
     border-color: white;
+}
+
+.chatListBox {
+    position: absolute;
+    top: 60px;
+    left: 8px;
+    width: 300px;
+    height: 400px;
+}
+
+.renderItemBox{
+    position: relative;
+    top: -14px;
+    left: -40px;
+    width: 300px;
+    height: fit-content;
+    margin-bottom: 5px;
+    background-color: unset;
+}
+
+.renderItem{
+    position: relative;
+    top: 10px;
+    left: 25px;
+    height: fit-content;
+    font-size: 18px;
+    font-weight: bold;
+    word-break: break-all;
 }

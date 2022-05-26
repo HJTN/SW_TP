@@ -9,8 +9,19 @@ function Chat()
     const [Chats, setChats] = useState([])
     const [value, setValue] = useState('')
 
+    const renderItem = (chat) => {
+        return (
+            <div className={styles.renderItemBox}>
+                <span className={styles.renderItem}>{chat}</span>
+            </div>
+        )
+    }
+
     const handleClick = () => {
-        alert('Clicked!');
+        if (value.trim().length > 0) {
+            setChats([...Chats, value]);
+            setValue('');
+        }
     }
 
     const handleKeyDown = (e) => {
@@ -36,14 +47,8 @@ function Chat()
             </div>
             <List
                 dataSource={Chats}
-                renderItem={todo => (
-                    <List.Item>
-                        {todo}
-                    </List.Item>
-                )}
-                style={({
-                    marginBottom: '4px'
-                })}
+                renderItem={renderItem}
+                className={styles.chatListBox}
             />
             <div className={styles.registerBox}>
                 <Input 
