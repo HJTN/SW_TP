@@ -12,6 +12,7 @@ import Center from "./Center";
 import Chat from "./Chat";
 import Noti from "./Noti";
 import Question from "./Question";
+import WishList from "./WishList";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Route path="/Chat" exact element={<Chat />}/>
       <Route path="/Noti" exact element={<Noti />}/>
       <Route path="/Question" exact element={<Question />}/>
+      <Route path="/WishList" exact element={<WishList />}/>
     </Routes>
   );
 }

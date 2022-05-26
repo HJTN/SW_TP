@@ -5,6 +5,7 @@ import { FaSearch, FaChevronLeft } from "react-icons/fa";
 import { HiOutlineSpeakerphone} from 'react-icons/hi'
 import Navbar from './Navbar';
 import { List } from 'antd';
+
 function Center()
 {
     let noti_list = ['최신 공지 사항 제목1', '최신 공지 사항 제목2', '최신 공지 사항 제목3', '최신 공지 사항 제목4']
@@ -27,7 +28,7 @@ function Center()
     return (
         <div>
             <div className={styles.Mainbox}>
-                <Link to={''} /* 이전 페이지로 이동 구현 필요*/>
+                <Link to={'/Main'}>
                     <div className={styles.backIcon}><FaChevronLeft /></div>
                 </Link>
                 <h2 className={styles.Title}>고객센터</h2>

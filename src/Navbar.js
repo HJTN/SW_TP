@@ -17,7 +17,9 @@ function Navbar()
             <Link to='/Center'>
                 <span className={styles.Icon3}><FaTelegramPlane size="2em"/></span>
             </Link>
+            <Link to={'/WishList'}>
             <span className={styles.Icon4}><FaRegHeart size="2em"/></span>
+            </Link>
             <Link to='/MyInfo'>
                 <span className={styles.Icon5}><FaRegUser size="2em"/></span>
             </Link>

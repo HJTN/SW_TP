@@ -25,10 +25,10 @@ function Question()
     return (
         <div>
             <div className={styles.Mainbox}>
-                <Link to={''} /* 이전 페이지로 이동 구현 필요*/>
+                <Link to={'/Center'} /* 이전 페이지로 이동 구현 필요*/>
                     <div className={styles.backIcon}><FaChevronLeft /></div>
                 </Link>
-                <h2 className={styles.Title}>{'Q & A'}</h2>
+                <h2 className={styles.Title}>질문게시판</h2>
                 <Link to={'/Search'}>
                     <div className={styles.searchIcon}><FaSearch /></div>
                 </Link>
