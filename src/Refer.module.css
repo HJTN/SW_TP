@@ -1,0 +1,24 @@
+.Mainbox { 
+    width: 300px; 
+    height: 55px; 
+    Top:-20px;
+    background: #FFE4E1;
+}
+
+.Title{
+    position: absolute;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    align-items: center;   
+    Width:200px;
+    height: 40px;
+    Left: 116px;
+    Top: 3px;
+}
+
+.block{
+    position: absolute;
+    top:70px;
+}

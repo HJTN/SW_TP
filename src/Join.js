@@ -27,10 +27,9 @@ function Join() {
     setPassword2(e.target.value);
   }
 
-  const onSubmit = (e) => {
+  const submit = (e) => {
     e.preventDefault();
-
-    const getUser = axios.post("http://34.64.85.119/", 
+    axios.post("http://34.64.85.119/", 
     {
       nickname: {nickname},
       id: {id},
@@ -46,7 +45,7 @@ function Join() {
   return (
     <div>
       <h1 className={styles.join}>회원가입</h1>
-      <form>
+      <form onSubmit={(e)=>submit(e)}>
       <input
         className={styles.nickname}
         name="nickname"
@@ -81,7 +80,7 @@ function Join() {
         onChange={onPassword2Handler}
       />
       <br></br>
-        <button className={styles.Btn} text="submit" onClick={onSubmit}>
+        <button className={styles.Btn}>
             완료
         </button>
       </form>

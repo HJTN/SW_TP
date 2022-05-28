@@ -28,7 +28,7 @@ function Noti()
                     <div className={styles.backIcon}><FaChevronLeft /></div>
                 </Link>
                 <h2 className={styles.Title}>공지사항</h2>
-                <Link to={'/Search'}>
+                <Link to={'/Refer'}>
                     <div className={styles.searchIcon}><FaSearch /></div>
                 </Link>
             </div>

@@ -29,7 +29,7 @@ function Question()
                     <div className={styles.backIcon}><FaChevronLeft /></div>
                 </Link>
                 <h2 className={styles.Title}>질문게시판</h2>
-                <Link to={'/Search'}>
+                <Link to={'/Refer'}>
                     <div className={styles.searchIcon}><FaSearch /></div>
                 </Link>
             </div>
