@@ -12,7 +12,7 @@ function WishList()
             <Link to={'/Main'}>
                 <div className={styles.Backicon}><FaChevronLeft /></div>
             </Link>
-            <Link to={'/Search'}>
+            <Link to={'/Refer'}>
                 <div className={styles.Searchicon}><FaSearch /></div>
             </Link>
             <Navbar />

@@ -1,76 +1,89 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Route, Routes, Link } from "react-router-dom";
 import styles from "./Join.module.css";
 import Certify from './Certify';
 
-// axios.defaults.withCredentials = true;
-
 function Join() {
 
-  const [inputs, setInputs] = useState({
-    nickname: "",
-    id: "",
-    password: "",
-    password2: "",
-  });
+  const [nickname, setNickname] = useState("")
+  const [id, setId] = useState("")
+  const [password, setPassword] = useState("")
+  const [password2, setPassword2] = useState("")
 
-  const { nickname, id, password, password2 } = inputs;
+  const onNicknameHandler = (e) => {
+    setNickname(e.target.value);
+  }
 
-  const onChange = (e) => {
-    const { value, name } = e.target;
-    setInputs({
-      ...inputs,
-      [name]: value, // [e.target.name]: e.target.value
-    });
-  };
+  const onIdHandler = (e) => {
+    setId(e.target.value);
+  }
 
+  const onPasswordHandler = (e) => {
+    setPassword(e.target.value);
+  }
+
+  const onPassword2Handler = (e) => {
+    setPassword2(e.target.value);
+  }
+
+  const submit = (e) => {
+    e.preventDefault();
+    axios.post("http://34.64.85.119/", 
+    {
+      nickname: {nickname},
+      id: {id},
+      password: {password}
+    }).then(function(response){
+      <Link to={'/Certify'}></Link>
+    }).catch(function(e){
+      alert(e);
+      console.log({nickname}, {id}, {password});
+    })
+  }
+ 
   return (
     <div>
       <h1 className={styles.join}>회원가입</h1>
+      <form onSubmit={(e)=>submit(e)}>
       <input
         className={styles.nickname}
-        id="nickname"
         name="nickname"
         placeholder="닉네임"
         value={nickname}
-        onChange={onChange}
+        onChange={onNicknameHandler}
       />
       <button className={styles.check}>중복확인</button>
       <br></br>
       <input
         className={styles.id}
-        id="id"
         name="id"
         placeholder="아이디"
         value={id}
-        onChange={onChange}
+        onChange={onIdHandler}
       />
       <button className={styles.checkid}>중복확인</button>
       <br></br>
       <input
         className={styles.password}
-        id="password"
         name="password"
         placeholder="비밀번호"
         value={password}
-        onChange={onChange}
+        onChange={onPasswordHandler}
       />
       <br></br>
       <input
         className={styles.password2}
-        id="password2"
         name="password2"
         placeholder="비밀번호 확인"
         value={password2}
-        onChange={onChange}
+        onChange={onPassword2Handler}
       />
       <br></br>
-      <Link to={"/Certify"}>
         <button className={styles.Btn}>
             완료
         </button>
-      </Link>
+      </form>
     </div>
   );
 }

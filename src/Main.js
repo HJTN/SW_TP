@@ -39,7 +39,7 @@ function Main()
         <div>
             <div className={styles.Mainbox}>
             <h2 className={styles.Title}>NOCS</h2>
-            <Link to={'/Search'}>
+            <Link to={'/Refer'}>
                 <div className={styles.Icon}><FaSearch /></div>
             </Link>
 
