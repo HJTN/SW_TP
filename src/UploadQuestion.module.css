@@ -1,0 +1,87 @@
+.Mainbox {
+    left: 0px;
+    top: -20px;
+    width: 300px;
+    height: 55px;
+    background: #FFE4E1;
+}
+
+.backIcon{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 28px;
+    color: #FF897B;
+    align-items: center;
+}
+
+.Title{
+    position: absolute;
+    Left: 116px;
+    top: 5px;
+    Width: fit-content;
+    height: fit-content;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    align-items: center;
+}
+
+.registerBtn{
+    position: absolute;
+    top: 90px;
+    left: 240px;
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: #FF897B;
+    border-style: none;
+    border-color: white;
+}
+
+.registerTitle{
+    position: absolute;
+    top: 160px;
+    left: 30px;
+    width: 250px;
+    height: 20px;
+    outline: none;
+    border: none;
+    background-color: unset;
+    border-bottom: 2px solid #FF897B;
+    font-size: 20px;
+}
+
+.contentTitle{
+    position: absolute;
+    top: 210px;
+    left: 30px;
+    width: fit-content;
+    height: fit-content;
+    margin: unset;
+    background-color: unset;
+    font-family: Roboto;
+    font-size: 24px;
+    color: #FF897B;
+}
+
+.registerContent{
+    position: absolute;
+    top: 260px;
+    left: 30px;
+    width: 250px;
+    height: 300px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: unset;
+    border: 2px solid #FF897B;
+    resize: none;
+    font-size: 14px;
+}
