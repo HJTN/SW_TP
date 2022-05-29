@@ -39,19 +39,12 @@
     top: 28px;
 }
 
-.notifyBox{
-    position: absolute;
-    width: 270px;
-    height: 270px;
-    left: 20px;
-    top: 100px;
-}
-
 .itemList{
     position: absolute;
-    top: 32px;
     width: 270px;
-    height: 220px;
+    height: fit-content;
+    left: 20px;
+    top: 80px;
 }
 
 .renderItemBox{
@@ -66,7 +59,7 @@
 
 .renderInBox{
     position: relative;
-    left: 30px;
+    left: 20px;
     width: 240px;
     height: 30px;
     border-bottom: 2px solid #FFE4E1; 

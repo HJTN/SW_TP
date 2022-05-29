@@ -7,7 +7,7 @@ import Navbar from './Navbar';
 import { List } from 'antd';
 function Question()
 {
-    let ques_list = ['질문1', '질문2', '질문3', '질문4']
+    let ques_list = ['질문1', '질문2', '질문3', '질문4', '질문5', '질문6']
     const [ques, setQues] = useState(ques_list)
 
     const renderItem = (data) => {
@@ -33,13 +33,11 @@ function Question()
                     <div className={styles.searchIcon}><FaSearch /></div>
                 </Link>
             </div>
-            <div className={styles.questionBox}>
-                <List
-                    dataSource={ques}
-                    renderItem={renderItem}
-                    className={styles.itemList}
-                />
-            </div>
+            <List
+                dataSource={ques}
+                renderItem={renderItem}
+                className={styles.itemList}
+            />
             <Navbar />
         </div>
     )
