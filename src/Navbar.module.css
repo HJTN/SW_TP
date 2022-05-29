@@ -11,8 +11,8 @@
   nav {
     overflow: hidden;
     border-top: 3px solid #FFE4E1;
-    width: 320px;
-    height: 55px;
+    width: 375px;
+    height: 70px;
   }
   /* nav태그 아래의 div태그들을 수평정렬 및 세로길이 설정 */
   nav > div {
@@ -29,35 +29,35 @@
 
 .Icon1 {
     position: absolute;
-    left: 30px;
+    left: 40px;
     bottom: 3px;
     color: #C4C4C4;
 }
 
 .Icon2 {
     position: absolute;
-    left: 90px;
+    left: 105px;
     bottom: 3px;
     color: #C4C4C4;
 }
 
 .Icon3 {
     position: absolute;
-    left: 150px;
+    left: 170px;
     bottom: 3px;
     color: #C4C4C4;
 }
 
 .Icon4 {
     position: absolute;
-    left: 210px;
+    left: 235px;
     bottom: 3px;
     color: #C4C4C4;
 }
 
 .Icon5 {
     position: absolute;
-    left: 270px;
+    left:300px;
     color: #C4C4C4;
     bottom: 3px;
 }

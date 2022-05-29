@@ -39,7 +39,7 @@ function UploadPage()
                 <input className={styles.WriteTitle} placeholder="글 제목.." value={Title}/> 
                 <br />
                 <br />
-                <textarea style={{width: 300, height: 200}}>상세정보..</textarea>
+                <textarea className={styles.info} style={{width: 300, height: 200 }}>상세정보..</textarea>
             </form>
             <Navbar />
         </div>

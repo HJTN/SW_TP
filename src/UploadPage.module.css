@@ -1,34 +1,39 @@
 .box { 
-    width: 300px; 
-    height: 55px; 
-    Top:-20px;
+    position: absolute;
+    width: 375px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+
     background: #FFE4E1;
 }
 
 .Title{
     position: absolute;
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: normal;
+    width: 100px;
+    height: 30px;
+    left: 141px;
+    top: 0px;
+    
+    font-family: 'Roboto';
     font-style: normal;
-    align-items: center;   
-    Width:200px;
-    height: 40px;
-    Left: 125px;
-    Top: 3px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.165px;
+    
+    color: #000000;
 }
 
 .RegisterBtn{
-    position: relative;
-    top: -10px;
-    Width:65px;
-    height: 23px;
-    Left:235px;
-    background: #FF897B;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-family: Roboto;
+    position: absolute;
+    width: 65px;
+    height: 25px;
+    left: 292px;
+    top: 87px;
 }
 
 .Backicon{
@@ -46,12 +51,35 @@
     color: #FF897B;
     width: 240px;
     height: 87px;
-    left: 270px;
+    left: 320px;
     align-items: center;
     top: 28px;
 }
 
 .WriteTitle{
+    position: absolute;
+    width: 300px;
+    height: 28px;
+    left: 38px;
+    top: 445px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    letter-spacing: -0.165px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    
+    color: #C4C4C4;
+}
+
+/*
     position: absolute;
     width: 300px;
 
@@ -66,4 +94,23 @@
     border-left: none;
     border-right: none;
     color: #979797;
+*/
+
+.info {
+    position: absolute;
+    width: 300px;
+    height: 248px;
+    left: 38px;
+    top: 500px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.165px;
+
+    color: #000000;
 }

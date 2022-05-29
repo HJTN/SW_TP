@@ -1,40 +1,39 @@
 .font{
     position: absolute;
-    width: 240px;
+    width: 230px;
     height: 87px;
-    left: 105px;
-    top: 315px;
-    font-family: Roboto;
-    font-weight: normal;
+    left: 80px;
+    top: 322px;
+    
+    font-family: 'Roboto';
     font-style: normal;
-    align-items: center;
+    font-weight: 400;
     font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.165px;
+    
+    color: #000000;
 }
 
 .Icon{
     position: absolute;
-    width: 240px;
-    height: 87px;
-    left: 205px;
-    align-items: center;
-    top: 306px;
+    width: 32px;
+    height: 32px;
+    left: 172px;
+    top: 306px;    
 }
 .LoginBtn {
     position: absolute;
     width: 271px;
     height: 29px;
-    left: 84px;
-    top: 420px;
-    color: white;
+    left: 52px;
+    top: 410px;
 
     background: #FF897B;
-    border: none;
     border-radius: 5px;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 6px 0px;
+    border: none;
+    color: white;
 }
