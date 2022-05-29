@@ -7,7 +7,7 @@ import Certify from './Certify';
 function Join() {
 
   const [nickname, setNickname] = useState("")
-  const [id, setId] = useState("")
+  const [user_id, setUser_id] = useState("")
   const [password, setPassword] = useState("")
   const [password2, setPassword2] = useState("")
 
@@ -16,7 +16,7 @@ function Join() {
   }
 
   const onIdHandler = (e) => {
-    setId(e.target.value);
+    setUser_id(e.target.value);
   }
 
   const onPasswordHandler = (e) => {
@@ -29,16 +29,16 @@ function Join() {
 
   const submit = (e) => {
     e.preventDefault();
-    axios.post("http://34.64.85.119/", 
+    axios.post("http://34.64.45.39:8000/User_info/", 
     {
       nickname: {nickname},
-      id: {id},
+      user_id: {user_id},
       password: {password}
     }).then(function(response){
       <Link to={'/Certify'}></Link>
     }).catch(function(e){
       alert(e);
-      console.log({nickname}, {id}, {password});
+      console.log({nickname}, {user_id}, {password});
     })
   }
  
@@ -57,9 +57,9 @@ function Join() {
       <br></br>
       <input
         className={styles.id}
-        name="id"
+        name="user_id"
         placeholder="아이디"
-        value={id}
+        value={user_id}
         onChange={onIdHandler}
       />
       <button className={styles.checkid}>중복확인</button>

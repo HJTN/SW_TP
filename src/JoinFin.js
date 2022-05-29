@@ -6,7 +6,7 @@ import styles from "./JoinFin.module.css";
 function JoinFin() {
     return (
         <div>
-            <div className={styles.Icon}><FaRegCheckCircle /></div>
+            <div className={styles.Icon}><FaRegCheckCircle size="2em"/></div>
             <h2 className={styles.font}>회원가입이 완료되었습니다.</h2>
             <Link to={'/'}>
                 <button className={styles.LoginBtn}>로그인으로 돌아가기</button>
