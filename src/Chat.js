@@ -40,7 +40,7 @@ function Chat()
     return (
         <div>
             <div className={styles.Mainbox}>
-                <Link to={''}>
+                <Link to={'/Main'}>
                     <div className={styles.backIcon}><FaChevronLeft /></div>
                 </Link>
                 <h2 className={styles.Title}>댓글</h2>

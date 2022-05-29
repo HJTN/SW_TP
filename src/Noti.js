@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 import { List } from 'antd';
 function Noti()
 {
-    let noti_list = ['최신 공지 사항 제목1', '최신 공지 사항 제목2', '최신 공지 사항 제목3', '최신 공지 사항 제목4']
+    let noti_list = ['공지1', '공지2', '공지3', '공지4', '공지5', '공지6']
     const [notis, setNotis] = useState(noti_list)
 
     const renderItem = (data) => {
@@ -32,13 +32,11 @@ function Noti()
                     <div className={styles.searchIcon}><FaSearch /></div>
                 </Link>
             </div>
-            <div className={styles.notifyBox}>
-                <List
-                    dataSource={notis}
-                    renderItem={renderItem}
-                    className={styles.itemList}
-                />
-            </div>
+            <List
+                dataSource={notis}
+                renderItem={renderItem}
+                className={styles.itemList}
+            />
             <Navbar />
         </div>
     )

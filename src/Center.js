@@ -56,7 +56,7 @@ function Center()
                 </Link>
             </div>
             <div className={styles.startQuestionBox}>
-                <Link to={''}>
+                <Link to={'/UploadQuestion'}>
                     <h4 className={styles.startQuestion}><HiOutlineSpeakerphone className={styles.speakerIcon} size="24"/>새 문의하기</h4>
                 </Link>
                 <h4 className={styles.runningText}>운영시간:  평일 10:00 ~ 18:00</h4>
