@@ -2,7 +2,7 @@ import React, { useState }from 'react'
 import { Link } from 'react-router-dom';
 import styles from './Chat.module.css';
 import { FaChevronLeft } from "react-icons/fa";
-import Navbar from './Navbar';
+import Navbar from '../Navbar/Navbar';
 import { List, Input } from 'antd';
 import VirtualList from 'rc-virtual-list';
 

@@ -1,22 +1,18 @@
 import React from "react";
 import { Route, Routes, Link } from "react-router-dom";
-import Join from "./Join";
-import Login from "./Login";
-import JoinFin from "./JoinFin";
-import Certify from './Certify';
-import UploadPage from "./UploadPage";
-import Main from "./Main";
-import Refer from "./Refer";
-import MyInfo from "./MyInfo";
-import ItemInfo from "./ItemInfo";
-import Center from "./Center";
-import Chat from "./Chat";
-import Noti from "./Noti";
-import Question from "./Question";
-import WishList from "./WishList";
-import UploadQuestion from "./UploadQuestion";
-import DetailNoti from './DetailNoti';
-import DetailQues from './DetailQues';
+import Join from "./Join/Join";
+import Login from "./Login/Login";
+import JoinFin from "./Join/JoinFin";
+import UploadPage from "./UploadPage/UploadPage";
+import Main from "./Main/Main";
+import Refer from "./Refer/Refer";
+import MyInfo from "./MyInfo/MyInfo";
+import Center from "./Center/Center";
+import Chat from "./Chat/Chat";
+import Noti from "./Noti/Noti";
+import Question from "./Question/Question";
+import WishList from "./Wishlist/WishList";
+import UploadQuestion from "./UploadQuestion/UploadQuestion";
 
 function App() {
   return (
@@ -24,7 +20,6 @@ function App() {
       <Route path="/" exact element={<Login />} />
       <Route path="/Join" exact element={<Join />} />
       <Route path="/JoinFin" exact element={<JoinFin />} />
-      <Route path="/Certify" exact element={<Certify />} />
       <Route path="/UploadPage" exact element={<UploadPage />} />
       <Route path="/Main" exact element={<Main />} />
       <Route path="/Refer" exact element={<Refer />} />

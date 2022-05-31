@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-import SearchFeature from './SearchFeature';
+import SearchFeature from '../Utils/SearchFeature';
 import { Icon, Col, Card, Row, Carousel } from 'antd';
 import styles from './Refer.module.css';
 

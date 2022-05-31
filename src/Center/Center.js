@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './Center.module.css';
 import { FaChevronLeft } from "react-icons/fa";
 import { HiOutlineSpeakerphone} from 'react-icons/hi'
-import Navbar from './Navbar';
+import Navbar from '../Navbar/Navbar';
 import { List } from 'antd';
 
 function Center()

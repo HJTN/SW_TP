@@ -2,7 +2,8 @@ import React, { useState, useEffect }from 'react'
 import { Link } from 'react-router-dom';
 import styles from './Question.module.css';
 import { FaSearch, FaChevronLeft } from "react-icons/fa";
-import Navbar from './Navbar';
+import { HiOutlineSpeakerphone} from 'react-icons/hi'
+import Navbar from '../Navbar/Navbar';
 import { List } from 'antd';
 import VirtualList from 'rc-virtual-list';
 
