@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import useForm from 'react-hook-form';
 import {Link} from 'react-router-dom';
 import { FaSearch, FaChevronLeft } from "react-icons/fa";
-import FileUpload from './FileUpload';
+import FileUpload from '../Utils/FileUpload';
 import styles from "./UploadPage.module.css";
-import Navbar from './Navbar';
+import Navbar from '../Navbar/Navbar';
 
 function UploadPage() 
 {

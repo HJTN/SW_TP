@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Route, Routes, Link } from "react-router-dom";
 import styles from "./Join.module.css";
-import Certify from './Certify';
 
 function Join() {
 
   const [nickname, setNickname] = useState("")
-  const [user_id, setUser_id] = useState("")
+  const [u_id, setU_id] = useState("")
   const [password, setPassword] = useState("")
   const [password2, setPassword2] = useState("")
 
@@ -16,7 +15,7 @@ function Join() {
   }
 
   const onIdHandler = (e) => {
-    setUser_id(e.target.value);
+    setU_id(e.target.value);
   }
 
   const onPasswordHandler = (e) => {
@@ -31,14 +30,14 @@ function Join() {
     e.preventDefault();
     axios.post("http://34.64.45.39:8000/User_info/", 
     {
-      nickname: {nickname},
-      user_id: {user_id},
-      password: {password}
+      nickname: nickname,
+      u_id: u_id,
+      password: password
     }).then(function(response){
-      <Link to={'/Certify'}></Link>
+      <Link to={'/JoinFin'}></Link>
     }).catch(function(e){
       alert(e);
-      console.log({nickname}, {user_id}, {password});
+      console.log({nickname}, {u_id}, {password});
     })
   }
  
@@ -57,9 +56,9 @@ function Join() {
       <br></br>
       <input
         className={styles.id}
-        name="user_id"
+        name="u_id"
         placeholder="아이디"
-        value={user_id}
+        value={u_id}
         onChange={onIdHandler}
       />
       <button className={styles.checkid}>중복확인</button>
@@ -80,9 +79,11 @@ function Join() {
         onChange={onPassword2Handler}
       />
       <br></br>
+      <Link to="/JoinFin">
         <button className={styles.Btn}>
             완료
         </button>
+      </Link>
       </form>
     </div>
   );

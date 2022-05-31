@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes, Link } from "react-router-dom";
 import styles from './WishList.module.css'
-import Navbar from './Navbar';
+import Navbar from '../Navbar/Navbar';
 import { FaSearch, FaChevronLeft } from "react-icons/fa";
 
 function WishList()

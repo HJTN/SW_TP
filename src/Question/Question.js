@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './Question.module.css';
 import { FaSearch, FaChevronLeft } from "react-icons/fa";
 import { HiOutlineSpeakerphone} from 'react-icons/hi'
-import Navbar from './Navbar';
+import Navbar from '../Navbar/Navbar';
 import { List } from 'antd';
 function Question()
 {

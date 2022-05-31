@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './MyInfo.module.css';
-import Navbar from './Navbar';
+import Navbar from '../Navbar/Navbar';
 import { FaSearch, FaChevronLeft, FaRegUser } from "react-icons/fa";
 
 function MyInfo()
