@@ -8,6 +8,7 @@ import UploadPage from "./UploadPage";
 import Main from "./Main";
 import Refer from "./Refer";
 import MyInfo from "./MyInfo";
+import ItemInfo from "./ItemInfo";
 import Center from "./Center";
 import Chat from "./Chat";
 import Noti from "./Noti";
@@ -26,6 +27,7 @@ function App() {
       <Route path="/Main" exact element={<Main />} />
       <Route path="/Refer" exact element={<Refer />} />
       <Route path="/MyInfo" exact element={<MyInfo />} />
+      <Route path="/ItemInfo" exact element={<ItemInfo />} />
       <Route path="/Center" exact element={<Center />}/>
       <Route path="/Chat" exact element={<Chat />}/>
       <Route path="/Noti" exact element={<Noti />}/>

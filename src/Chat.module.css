@@ -71,25 +71,36 @@
     top: 60px;
     left: 8px;
     width: 300px;
-    height: 400px;
+    height: fit-content;
+    list-style: none;
 }
 
 .renderItemBox{
     position: relative;
-    top: -14px;
-    left: -40px;
+    top: 0px;
+    left: 0px;
     width: 300px;
-    height: fit-content;
-    margin-bottom: 5px;
-    background-color: unset;
+    height: 60px;
+    border-bottom: 1px solid #c4c4c4;
 }
 
 .renderItem{
-    position: relative;
+    position: absolute;
     top: 10px;
-    left: 25px;
+    left: 10px;
     height: fit-content;
     font-size: 18px;
+    font-weight: bold;
+    word-break: break-all;
+}
+
+.renderDate{
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    height: fit-content;
+    color: #c4c4c4;
+    font-size: 8px;
     font-weight: bold;
     word-break: break-all;
 }

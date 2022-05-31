@@ -4,22 +4,20 @@ import styles from './Chat.module.css';
 import { FaChevronLeft } from "react-icons/fa";
 import Navbar from './Navbar';
 import { List, Input } from 'antd';
+import VirtualList from 'rc-virtual-list';
+
 function Chat() 
 {
     const [Chats, setChats] = useState([])
     const [value, setValue] = useState('')
 
-    const renderItem = (chat) => {
-        return (
-            <div className={styles.renderItemBox}>
-                <span className={styles.renderItem}>{chat}</span>
-            </div>
-        )
-    }
-
     const handleClick = () => {
         if (value.trim().length > 0) {
-            setChats([...Chats, value]);
+            let now = new Date();
+            setChats([...Chats, {
+                content: value,
+                date: `${now.getFullYear()}.${now.getMonth()+1}.${now.getDate()}. ${now.getHours()}:${now.getMinutes()}`,
+            }]);
             setValue('');
         }
     }
@@ -27,7 +25,11 @@ function Chat()
     const handleKeyDown = (e) => {
         if (e.keyCode === 13) {
             if (value.trim().length > 0) {
-                setChats([...Chats, value]);
+                let now = new Date();
+                setChats([...Chats, {
+                    content: value,
+                    date: `${now.getFullYear()}.${now.getMonth()+1}.${now.getDate()}. ${now.getHours()}:${now.getMinutes()}`,
+                }]);
                 setValue('');
             }
         }
@@ -40,16 +42,30 @@ function Chat()
     return (
         <div>
             <div className={styles.Mainbox}>
-                <Link to={'/Main'}>
+                <Link to={'/ItemInfo'}>
                     <div className={styles.backIcon}><FaChevronLeft /></div>
                 </Link>
                 <h2 className={styles.Title}>댓글</h2>
             </div>
             <List
-                dataSource={Chats}
-                renderItem={renderItem}
                 className={styles.chatListBox}
-            />
+            >
+                <VirtualList
+                    data={Chats}
+                    height={600}
+                    itemHeight={47}
+                    itemKey='Chat'
+                >
+                    {(item) => (
+                        <List.Item key={item.Chat}>
+                            <div className={styles.renderItemBox}>
+                                <div className={styles.renderItem}>{item.content}</div>
+                                <div className={styles.renderDate}>{item.date}</div>
+                            </div>
+                        </List.Item>
+                    )}
+                </VirtualList>
+            </List>
             <div className={styles.registerBox}>
                 <Input 
                     type={'text'} 
