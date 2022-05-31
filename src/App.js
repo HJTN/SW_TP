@@ -15,6 +15,8 @@ import Noti from "./Noti";
 import Question from "./Question";
 import WishList from "./WishList";
 import UploadQuestion from "./UploadQuestion";
+import DetailNoti from './DetailNoti';
+import DetailQues from './DetailQues';
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
       <Route path="/Question" exact element={<Question />}/>
       <Route path="/WishList" exact element={<WishList />}/>
       <Route path="/UploadQuestion" exact element={<UploadQuestion />}/>
+      <Route path="/DetailNoti" exact element={<DetailNoti />}/>
+      <Route path="/DetailQues" exact element={<DetailQues />}/>
     </Routes>
   );
 }

@@ -29,39 +29,21 @@
     align-items: center;
 }
 
-.registerBtn{
+.quesTitle{
     position: absolute;
-    top: 90px;
-    left: 240px;
-    width: 60px;
-    height: 25px;
-    border-radius: 5px;
-    font-family: Roboto;
-    font-size: 12px;
-    font-weight: bold;
-    color: white;
-    background-color: #FF897B;
-    border-style: none;
-    border-color: white;
-}
-
-.registerTitle{
-    position: absolute;
-    top: 160px;
+    top: 100px;
     left: 30px;
     width: 250px;
     height: fit-content;
-    padding: 5px;
-    outline: none;
-    border: none;
+    padding-bottom: 5px;
     background-color: unset;
     border-bottom: 2px solid #FF897B;
     font-size: 24px;
 }
 
-.contentTitle{
+.quesContentTitle{
     position: absolute;
-    top: 220px;
+    top: 160px;
     left: 30px;
     width: fit-content;
     height: fit-content;
@@ -72,12 +54,40 @@
     color: #FF897B;
 }
 
-.registerContent{
+.quesContent{
     position: absolute;
-    top: 260px;
+    top: 200px;
     left: 30px;
     width: 250px;
-    height: 300px;
+    height: 150px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: unset;
+    border: 2px solid #FF897B;
+    resize: none;
+    font-size: 14px;
+}
+
+.ansContentTitle{
+    position: absolute;
+    top: 380px;
+    left: 30px;
+    width: fit-content;
+    height: fit-content;
+    margin: unset;
+    background-color: unset;
+    font-family: Roboto;
+    font-size: 20px;
+    color: #FF897B;
+}
+
+.ansContent{
+    position: absolute;
+    top: 420px;
+    left: 30px;
+    width: 250px;
+    height: 150px;
     outline: none;
     border: none;
     border-radius: 5px;

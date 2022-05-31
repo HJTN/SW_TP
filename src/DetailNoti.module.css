@@ -29,31 +29,13 @@
     align-items: center;
 }
 
-.registerBtn{
+.notiTitle{
     position: absolute;
-    top: 90px;
-    left: 240px;
-    width: 60px;
-    height: 25px;
-    border-radius: 5px;
-    font-family: Roboto;
-    font-size: 12px;
-    font-weight: bold;
-    color: white;
-    background-color: #FF897B;
-    border-style: none;
-    border-color: white;
-}
-
-.registerTitle{
-    position: absolute;
-    top: 160px;
+    top: 100px;
     left: 30px;
     width: 250px;
     height: fit-content;
-    padding: 5px;
-    outline: none;
-    border: none;
+    padding-bottom: 5px;
     background-color: unset;
     border-bottom: 2px solid #FF897B;
     font-size: 24px;
@@ -61,7 +43,7 @@
 
 .contentTitle{
     position: absolute;
-    top: 220px;
+    top: 160px;
     left: 30px;
     width: fit-content;
     height: fit-content;
@@ -72,9 +54,9 @@
     color: #FF897B;
 }
 
-.registerContent{
+.notiContent{
     position: absolute;
-    top: 260px;
+    top: 200px;
     left: 30px;
     width: 250px;
     height: 300px;
