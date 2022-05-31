@@ -1,22 +1,32 @@
 import React, { useState, useEffect }from 'react'
 import { Link } from 'react-router-dom';
 import styles from './Center.module.css';
-import { FaSearch, FaChevronLeft } from "react-icons/fa";
+import { FaChevronLeft } from "react-icons/fa";
 import { HiOutlineSpeakerphone} from 'react-icons/hi'
 import Navbar from '../Navbar/Navbar';
 import { List } from 'antd';
 
 function Center()
 {
-    let noti_list = ['최신 공지 사항 제목1', '최신 공지 사항 제목2', '최신 공지 사항 제목3', '최신 공지 사항 제목4']
-    let ques_list = ['질문1', '질문2', '질문3', '질문4']
-    const [notis, setNotis] = useState(noti_list)
-    const [ques, setQues] = useState(ques_list)
+    const [notis, setNotis] = useState(['최신 공지 사항 제목1', '최신 공지 사항 제목2', '최신 공지 사항 제목3', '최신 공지 사항 제목4'])
+    const [ques, setQues] = useState(['질문1', '질문2', '질문3', '질문4'])
 
-    const renderItem = (data) => {
+    const renderNotiItem = (data) => {
         return (
             <div className={styles.renderItemBox}>
-                <Link to={''} style={{textDecoration: 'none'}}>
+                <Link to={'/DetailNoti'} style={{textDecoration: 'none'}} className={styles.linkStyle}>
+                    <div className={styles.renderInBox}>
+                        <span className={styles.renderItem}>{data}</span>
+                    </div>
+                </Link>
+            </div>
+        )
+    }
+
+    const renderQuesItem = (data) => {
+        return (
+            <div className={styles.renderItemBox}>
+                <Link to={'/DetailQues'} style={{textDecoration: 'none'}} className={styles.linkStyle}>
                     <div className={styles.renderInBox}>
                         <span className={styles.renderItem}>{data}</span>
                     </div>
@@ -37,7 +47,7 @@ function Center()
                 <h2 className={styles.boxTitle}>공지사항</h2>
                 <List
                     dataSource={notis}
-                    renderItem={renderItem}
+                    renderItem={renderNotiItem}
                     className={styles.itemList}
                 />
                 <Link to={'/Noti'}>
@@ -48,7 +58,7 @@ function Center()
                 <h2 className={styles.boxTitle}>자주 묻는 질문</h2>
                 <List
                     dataSource={ques}
-                    renderItem={renderItem}
+                    renderItem={renderQuesItem}
                     className={styles.itemList}
                 />
                 <Link to={'/Question'}>

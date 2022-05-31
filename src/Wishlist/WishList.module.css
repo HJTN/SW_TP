@@ -37,3 +37,96 @@
     align-items: center;
     top: 28px;
 }
+
+.contentTitle{
+    position: absolute;
+    left: 20px;
+    top: 100px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.chatListBox {
+    position: absolute;
+    top: 140px;
+    left: 8px;
+    width: 300px;
+    height: fit-content;
+    list-style: none;
+}
+
+.renderItemBox{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 120px;
+    padding-bottom: 5px;
+    background-color: unset;
+    border-bottom: 2px solid #FFE4E1;
+}
+
+.renderImage{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+.renderTitle{
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    width: 200px;
+    height: fit-content;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    word-break: break-all;
+}
+
+.renderItemName{
+    position: absolute;
+    top: 40px;
+    left: 90px;
+    width: 200px;
+    height: fit-content;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.renderPrice{
+    position: absolute;
+    top: 60px;
+    left: 90px;
+    width: 100px;
+    height: fit-content;
+    font-size: 14px;
+    color: #FF897B;
+    word-break: break-all;
+}
+
+.renderPeriod{
+    position: absolute;
+    top: 60px;
+    left: 190px;
+    width: 100px;
+    height: fit-content;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.renderMore{
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    width: 80px;
+    height: fit-content;
+    text-align: center;
+    color: #FF897B;
+    background-color: unset;
+    border-style: none;
+}

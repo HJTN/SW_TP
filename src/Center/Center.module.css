@@ -78,6 +78,10 @@
     border-style: none;
 }
 
+.linkStyle{
+    color: black;
+}
+
 .renderItemBox{
     position: relative;
     top: 10px;

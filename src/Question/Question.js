@@ -5,22 +5,11 @@ import { FaSearch, FaChevronLeft } from "react-icons/fa";
 import { HiOutlineSpeakerphone} from 'react-icons/hi'
 import Navbar from '../Navbar/Navbar';
 import { List } from 'antd';
+import VirtualList from 'rc-virtual-list';
+
 function Question()
 {
-    let ques_list = ['질문1', '질문2', '질문3', '질문4', '질문5', '질문6']
-    const [ques, setQues] = useState(ques_list)
-
-    const renderItem = (data) => {
-        return (
-            <div className={styles.renderItemBox}>
-                <Link to={''} style={{textDecoration: 'none'}}>
-                    <div className={styles.renderInBox}>
-                        <span className={styles.renderItem}>{data}</span>
-                    </div>
-                </Link>
-            </div>
-        )
-    }
+    const [ques, setQues] = useState(['질문1', '질문2', '질문3', '질문4', '질문5', '질문6','질문7', '질문8', '질문9', '질문10', '질문11', '질문12'])
 
     return (
         <div>
@@ -34,10 +23,27 @@ function Question()
                 </Link>
             </div>
             <List
-                dataSource={ques}
-                renderItem={renderItem}
                 className={styles.itemList}
-            />
+            >
+                <VirtualList
+                    data={ques}
+                    height={600}
+                    itemHeight={47}
+                    itemKey='Ques'
+                >
+                    {(item) => (
+                        <List.Item key={item.Ques}>
+                            <div className={styles.renderItemBox}>
+                                <Link to={'/DetailQues'} style={{textDecoration: 'none'}} className={styles.linkStyle}>
+                                    <div className={styles.renderInBox}>
+                                        <span className={styles.renderItem}>{item}</span>
+                                    </div>
+                                </Link>
+                            </div>
+                        </List.Item>
+                    )}
+                </VirtualList>
+            </List>
             <Navbar />
         </div>
     )
