@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './MyInfo.module.css';
 import Navbar from '../Navbar/Navbar';
-import { FaSearch, FaChevronLeft, FaRegUser } from "react-icons/fa";
+import { FaSearch, FaChevronLeft, FaRegUser, FaRegFile, FaBell, FaRegComments, FaRegFilePdf } from "react-icons/fa";
 
 function MyInfo()
 {
@@ -16,8 +16,16 @@ function MyInfo()
                 <div className={styles.Searchicon}><FaSearch /></div>
             </Link>
             <div className={styles.Userbox}>
-                <div className={styles.Usericon} ><FaRegUser size="xs" /></div>
+                <div className={styles.Usericon} ><FaRegUser size="1x" /></div>
             </div>
+            <div className={styles.Shareicon}><FaRegFile size="40"/></div>
+            <div className={styles.lenticon}><FaRegFilePdf size="40" /></div>
+            <div className={styles.qnaicon}><FaBell size="40"/></div>
+            <div className={styles.chaticon}><FaRegComments size="40"/></div>
+            <h4 className={styles.shareindex}>공유 중인 물품</h4>
+            <h4 className={styles.lentindex}>대여 중인 물품</h4>
+            <h4 className={styles.qnaindex}>문의답변</h4>
+            <h4 className={styles.chatindex}>메세지</h4>
             <div className={styles.rectangle}></div>
             <div className={styles.line1}></div>
             <h3 className={styles.sharetext}>공유 중인 물품</h3>
