@@ -1,0 +1,142 @@
+.Mainbox { 
+    position: absolute;
+    width: 375px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+
+    background: #FFE4E1;
+}
+
+.Title{
+    position: absolute;
+    width: 140px;
+    height: 30px;
+    left: 131px;
+    top: 0px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.165px;
+    
+    color: #000000;
+}
+
+.Backicon{
+    position: absolute;
+    color: #FF897B;
+    width: 240px;
+    height: 87px;
+    left: 28px;
+    align-items: center;
+    top: 28px;
+}
+
+.Searchicon{
+    position: absolute;
+    color: #FF897B;
+    width: 240px;
+    height: 87px;
+    left: 320px;
+    align-items: center;
+    top: 28px;
+}
+
+.contentTitle{
+    position: absolute;
+    left: 20px;
+    top: 100px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.chatListBox {
+    position: absolute;
+    top: 140px;
+    left: 0px;
+    width: 375px;
+    height: fit-content;
+    list-style: none;
+}
+
+.renderItemBox{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 375px;
+    height: 120px;
+    padding-bottom: 5px;
+    background-color: unset;
+    border-bottom: 2px solid #FFE4E1;
+}
+
+.renderImage{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+.renderTitle{
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    width: 260px;
+    height: fit-content;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    word-break: break-all;
+}
+
+.renderItemName{
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    width: 260px;
+    height: fit-content;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.renderPrice{
+    position: absolute;
+    top: 60px;
+    left: 100px;
+    width: 130px;
+    height: fit-content;
+    font-size: 14px;
+    color: #FF897B;
+    word-break: break-all;
+}
+
+.renderPeriod{
+    position: absolute;
+    top: 60px;
+    left: 230px;
+    width: 130px;
+    height: fit-content;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.renderMore{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 80px;
+    height: fit-content;
+    text-align: center;
+    color: #FF897B;
+    background-color: unset;
+    border-style: none;
+}

@@ -16,6 +16,7 @@ import UploadQuestion from "./UploadQuestion/UploadQuestion";
 import ItemInfo from "./ItemInfo/ItemInfo";
 import DetailQues from "./DetailQues/DetailQues";
 import DetailNoti from "./DetailNoti/DetailNoti";
+import ItemList from './ItemList/ItemList';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
       <Route path="/UploadQuestion" exact element={<UploadQuestion />}/>
       <Route path="/DetailNoti" exact element={<DetailNoti />}/>
       <Route path="/DetailQues" exact element={<DetailQues />}/>
+      <Route path="/ItemList" exact element={<ItemList />}/>
     </Routes>
   );
 }
