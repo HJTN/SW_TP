@@ -44,14 +44,13 @@
     left: 300px;
     width: 60px;
     height: 25px;
+    left: 292px;
+    top: 87px;
+    
+    background: #FF897B;
     border-radius: 5px;
-    font-family: Roboto;
-    font-size: 12px;
-    font-weight: bold;
+    border: none;
     color: white;
-    background-color: #FF897B;
-    border-style: none;
-    border-color: white;
 }
 
 .Itembox{
@@ -110,6 +109,28 @@
     top: 420px;
     left: 30px;
     width: 300px;
+<<<<<<< HEAD
+    height: 270px;
+    left: 38px;
+    top: 520px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.165px;
+
+    color: #000000;
+}
+
+.drop {
+    position: absolute;
+    top: 150px;
+    left: 38px;
+=======
     height: 300px;
     outline: none;
     border: none;
@@ -118,4 +139,5 @@
     border: 2px solid #FF897B;
     resize: none;
     font-size: 14px;
+>>>>>>> upstream/main
 }

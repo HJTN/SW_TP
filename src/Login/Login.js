@@ -19,12 +19,12 @@ function Login() {
 
   const submit = (e) => {
     e.preventDefault();
-    axios.post("http://34.64.45.39:8000/User_info/", 
+    axios.post("http://34.64.45.39:8000/User_info/login/?login_id=dd", 
     {
       u_id: u_id,
       password: password
     }).then(function(response){
-      if(response.payload.loginSuccess){
+      if(PaymentResponse){
         <Link to={'/Main'}></Link>
       } else {
         alert("로그인에 실패했습니다.");

@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import SearchFeature from '../Utils/SearchFeature';
-import { Icon, Col, Card, Row, Carousel } from 'antd';
-import styles from './Refer.module.css';
 import { Link } from 'react-router-dom';
+import { Icon, Col, Card, Row, Carousel } from 'antd';
 import { FaChevronLeft } from "react-icons/fa";
+import styles from './Refer.module.css';
+import Navbar from '../Navbar/Navbar';
 
 function Refer()
 {
@@ -62,7 +63,7 @@ function Refer()
         <div className={styles.Mainbox}>
             <h2 className={styles.Title}>검색페이지</h2>
             <Link to={'/Main'}>
-                <div className={styles.backIcon}><FaChevronLeft /></div>
+                <div className={styles.Backicon}><FaChevronLeft /></div>
             </Link>
             <div className={styles.block}>
                 <SearchFeature
@@ -74,6 +75,7 @@ function Refer()
                     {renderCards}
                 </Row>
             </div>
+            <Navbar />
         </div>
     )
 }

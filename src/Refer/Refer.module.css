@@ -20,9 +20,9 @@
 
 .Title{
     position: absolute;
-    width: 140px;
+    width: 130px;
     height: 30px;
-    left: 131px;
+    left: 141px;
     top: 0px;
     
     font-family: 'Roboto';
@@ -41,15 +41,14 @@
 .block{
     position: absolute;
     top:70px;
-    width: 375px;
-    height: 60px;
 }
 
-.searchStyle{
+.Backicon{
     position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 375px;
-    height: 60px;
-
+    color: #FF897B;
+    width: 240px;
+    height: 87px;
+    left: 28px;
+    align-items: center;
+    top: 28px;
 }

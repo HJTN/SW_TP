@@ -41,10 +41,22 @@ function UploadPage()
                 <div className={styles.Itemicon} ><BiCloset size='6x' /></div>
                 <div className={styles.itemChangeBtn} onClick={handleClick}><AiOutlinePlusCircle size='4em'/></div>
             </div>
-            <button className={styles.registerBtn} onClick={handleRegister}>등록</button>
-            <input type={'text'} className={styles.registerTitle} placeholder='글 제목'/>
-            <h4 className={styles.contentTitle}>상품 정보</h4>
-            <textarea className={styles.registerContent} fixed placeholder='상품 정보...'/>
+            <Link to={'/Main'}>
+                <div className={styles.Backicon}><FaChevronLeft /></div>
+            </Link>
+            <Link to={'/Refer'}>
+                <div className={styles.Searchicon}><FaSearch /></div>
+            </Link>
+            <br/>
+            <button className={styles.RegisterBtn}>등록</button>
+            <form>
+                <div className={styles.drop}><FileUpload refreshFunction={updateImages} /></div>
+                <br />
+                <input className={styles.WriteTitle} placeholder="글 제목.." value={Title}/> 
+                <br />
+                <br />
+                <textarea className={styles.info} style={{width: 300, height: 250 }}>상세정보..</textarea>
+            </form>
             <Navbar />
         </div>
     )

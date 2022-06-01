@@ -35,6 +35,7 @@ function Join() {
       password: password
     }).then(function(response){
       <Link to={'/JoinFin'}></Link>
+      console.log({u_id}, {password});
     }).catch(function(e){
       alert(e);
       console.log({nickname}, {u_id}, {password});
@@ -79,11 +80,9 @@ function Join() {
         onChange={onPassword2Handler}
       />
       <br></br>
-      <Link to="/JoinFin">
         <button className={styles.Btn}>
             완료
         </button>
-      </Link>
       </form>
     </div>
   );
