@@ -2,12 +2,15 @@
 import React, { useState } from "react";
 import axios from "axios";
 import styles from "./Login.module.css";
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link, useNavigate } from "react-router-dom";
+import MyInfo from "../MyInfo/MyInfo";
 
 function Login() {
   // 기본 로그인
-  const [u_id, setU_id] = useState("")
-  const [password, setPassword] = useState("")
+  const navigate = useNavigate();
+  const [u_id, setU_id] = useState("");
+  const [password, setPassword] = useState("");
+  const [user, setUser] = useState("");
  
   const onIdHandler = (e) => {
     setU_id(e.target.value);
@@ -19,13 +22,14 @@ function Login() {
 
   const submit = (e) => {
     e.preventDefault();
-    axios.post("http://34.64.45.39:8000/User_info/login/?login_id=dd", 
+    axios.post("http://34.64.45.39:8000/User_info/login/", 
     {
       u_id: u_id,
       password: password
     }).then(function(response){
-      if(PaymentResponse){
-        <Link to={'/Main'}></Link>
+      if(response.data){
+        navigate('/Main');
+        setUser(response.data.u_id);
       } else {
         alert("로그인에 실패했습니다.");
       }
