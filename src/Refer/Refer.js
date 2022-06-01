@@ -3,6 +3,8 @@ import axios from 'axios';
 import SearchFeature from '../Utils/SearchFeature';
 import { Icon, Col, Card, Row, Carousel } from 'antd';
 import styles from './Refer.module.css';
+import { Link } from 'react-router-dom';
+import { FaChevronLeft } from "react-icons/fa";
 
 function Refer()
 {
@@ -59,9 +61,13 @@ function Refer()
     return (
         <div className={styles.Mainbox}>
             <h2 className={styles.Title}>검색페이지</h2>
+            <Link to={'/Main'}>
+                <div className={styles.backIcon}><FaChevronLeft /></div>
+            </Link>
             <div className={styles.block}>
                 <SearchFeature
                     refreshFunction={updateSearchTerm}
+                    className={styles.searchStyle}
                 />
 
                 <Row gutter={[16, 16]} /*gutter여백넣기*/>
