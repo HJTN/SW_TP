@@ -108,10 +108,6 @@
     top: 420px;
     left: 30px;
     width: 300px;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> upstream/main
     height: 270px;
     left: 38px;
     top: 520px;
@@ -132,17 +128,12 @@
     position: absolute;
     top: 150px;
     left: 38px;
-<<<<<<< HEAD
-=======
-=======
     height: 300px;
     outline: none;
     border: none;
     border-radius: 5px;
     background-color: unset;
-    border: 2px solid #FF897B;
     resize: none;
     font-size: 14px;
->>>>>>> upstream/main
->>>>>>> upstream/main
+
 }
