@@ -1,7 +1,7 @@
 import React, { useState }from 'react'
 import { Link } from 'react-router-dom';
 import styles from './ItemInfo.module.css';
-import Navbar from './Navbar';
+import Navbar from '../Navbar/Navbar';
 import { FaChevronLeft, FaRegUser } from "react-icons/fa";
 import { BiCloset } from 'react-icons/bi'
 
@@ -19,8 +19,8 @@ function ItemInfo()
         <div>       
             <div className={styles.Mainbox}>
                 <h2 className={styles.Title}>상세정보</h2>
-                <Link to={'/Main'}>
-                    <div className={styles.Backicon}><FaChevronLeft /></div>
+                <Link to={'/WishList'}>
+                    <div className={styles.backIcon}><FaChevronLeft /></div>
                 </Link>
             </div>
             <div className={styles.Itembox}>

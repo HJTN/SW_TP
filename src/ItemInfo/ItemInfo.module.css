@@ -1,31 +1,41 @@
-.Mainbox { 
-    width: 300px; 
-    height: 55px; 
-    Top:-20px;
+.Mainbox {
+    position: absolute;
+    width: 375px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+
     background: #FFE4E1;
+}
+
+.backIcon{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 28px;
+    color: #FF897B;
+    align-items: center;
 }
 
 .Title{
     position: absolute;
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: normal;
+    width: 100px;
+    height: 30px;
+    left: 141px;
+    top: 0px;
+    
+    font-family: 'Roboto';
     font-style: normal;
-    align-items: center;   
-    Width:200px;
-    height: 40px;
-    Left: 125px;
-    Top: 3px;
-}
-
-.Backicon{
-    position: absolute;
-    color: #FF897B;
-    width: 240px;
-    height: 87px;
-    left: 28px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
     align-items: center;
-    top: 28px;
+    text-align: center;
+    letter-spacing: -0.165px;
+    
+    color: #000000;
 }
 
 .Itembox{

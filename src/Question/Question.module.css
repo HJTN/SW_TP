@@ -1,8 +1,10 @@
 .Mainbox {
+    position: absolute;
+    width: 375px;
+    height: 70px;
     left: 0px;
-    top: -20px;
-    width: 300px;
-    height: 55px;
+    top: 0px;
+
     background: #FFE4E1;
 }
 
@@ -18,15 +20,22 @@
 
 .Title{
     position: absolute;
-    Left: 116px;
-    top: 5px;
-    Width: fit-content;
-    height: fit-content;
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: normal;
+    width: 140px;
+    height: 30px;
+    left: 131px;
+    top: 0px;
+    
+    font-family: 'Roboto';
     font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
     align-items: center;
+    text-align: center;
+    letter-spacing: -0.165px;
+    
+    color: #000000;
 }
 
 .searchIcon{
@@ -34,7 +43,7 @@
     color: #FF897B;
     width: 240px;
     height: 87px;
-    left: 270px;
+    left: 320px;
     align-items: center;
     top: 28px;
 }

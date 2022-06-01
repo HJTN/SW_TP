@@ -13,6 +13,9 @@ import Noti from "./Noti/Noti";
 import Question from "./Question/Question";
 import WishList from "./Wishlist/WishList";
 import UploadQuestion from "./UploadQuestion/UploadQuestion";
+import ItemInfo from "./ItemInfo/ItemInfo";
+import DetailQues from "./DetailQues/DetailQues";
+import DetailNoti from "./DetailNoti/DetailNoti";
 
 function App() {
   return (

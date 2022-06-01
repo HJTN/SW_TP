@@ -2,7 +2,7 @@ import React, { useState, useEffect }from 'react'
 import { Link } from 'react-router-dom';
 import styles from './DetailQues.module.css';
 import { FaChevronLeft } from "react-icons/fa";
-import Navbar from './Navbar';
+import Navbar from '../Navbar/Navbar';
 
 function DetailQues()
 {
