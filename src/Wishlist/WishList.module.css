@@ -10,15 +10,12 @@
 
 .Title{
     position: absolute;
-<<<<<<< HEAD
     width: 150px;
     height: 30px;
     left: 137px;
-=======
-    width: 140px;
+    width: 150px;
     height: 30px;
-    left: 131px;
->>>>>>> upstream/main
+    left: 137px;
     top: 0px;
     
     font-family: 'Roboto';

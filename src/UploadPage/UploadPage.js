@@ -38,7 +38,7 @@ function UploadPage()
                 <h2 className={styles.Title}>공유하기</h2>
             </div>
             <div className={styles.Itembox}>
-                <div className={styles.Itemicon} ><BiCloset size='6x' /></div>
+                <div className={styles.Itemicon} ><BiCloset size='300' /></div>
                 <div className={styles.itemChangeBtn} onClick={handleClick}><AiOutlinePlusCircle size='4em'/></div>
             </div>
             <Link to={'/Main'}>
@@ -48,14 +48,14 @@ function UploadPage()
                 <div className={styles.Searchicon}><FaSearch /></div>
             </Link>
             <br/>
-            <button className={styles.RegisterBtn}>등록</button>
+            <button className={styles.registerBtn}>등록</button>
             <form>
                 <div className={styles.drop}><FileUpload refreshFunction={updateImages} /></div>
                 <br />
-                <input className={styles.WriteTitle} placeholder="글 제목.." value={Title}/> 
+                <input className={styles.registerTitle} placeholder="글 제목.." value={Title}/> 
                 <br />
                 <br />
-                <textarea className={styles.info} style={{width: 300, height: 250 }}>상세정보..</textarea>
+                <textarea className={styles.registerContent} style={{width: 300, height: 250 }}>상세정보..</textarea>
             </form>
             <Navbar />
         </div>

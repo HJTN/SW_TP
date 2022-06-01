@@ -1,14 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import styles from './MyInfo.module.css';
 import Navbar from '../Navbar/Navbar';
 import { FaSearch, FaChevronLeft, FaRegUser, FaRegFile, FaBell, FaRegComments, FaRegFilePdf } from "react-icons/fa";
 
-function MyInfo()
+function MyInfo({user})
 {
+    //setU_id(u_id);
+    console.log({user});
     return(
         <div className={styles.Mainbox}>
             <h2 className={styles.Title}>내정보</h2>
+            <h3>{user}</h3>
             <Link to={'/Main'}>
                 <div className={styles.Backicon}><FaChevronLeft /></div>
             </Link>
@@ -16,7 +19,7 @@ function MyInfo()
                 <div className={styles.Searchicon}><FaSearch /></div>
             </Link>
             <div className={styles.Userbox}>
-                <div className={styles.Usericon} ><FaRegUser size="1x" /></div>
+                <div className={styles.Usericon} ><FaRegUser size="70" /></div>
             </div>
             <div className={styles.Shareicon}><FaRegFile size="40"/></div>
             <div className={styles.lenticon}><FaRegFilePdf size="40" /></div>
