@@ -8,12 +8,27 @@ import Navbar from '../Navbar/Navbar';
 import axios from 'axios';
 import Meta from 'antd/lib/card/Meta';
 import { Card, Row, Col } from 'antd';
+import { List, Input } from 'antd';
+import VirtualList from 'rc-virtual-list';
+
 function Main() 
 {
-    const [Products, setProducts] = useState([])
+    const [Products, setProducts] = useState([
+        {
+            cate: '# 신규 등록 의류',
+        },
+        {
+            cate: '# 봄 # 데일리',
+        },
+        {
+            cate: '# 행사 # 파티',
+        },
+        {
+            cate: '# 휴가 # 여행',
+        }
+    ])
 
     useEffect(() => {
-        
         axios.post('url', )
             .then(response => {
                 if(response.data.success) {
@@ -38,19 +53,37 @@ function Main()
     return (
         <div>
             <div className={styles.Mainbox}>
-            <h2 className={styles.Title}>NOCS</h2>
-            <Link to={'/Refer'}>
-                <div className={styles.Icon}><FaSearch /></div>
-            </Link>
-
-            <Row>
-                {renderCards}
-            </Row> 
+                <h2 className={styles.Title}>NOCS</h2>
+                <Link to={'/Refer'}>
+                    <div className={styles.searchIcon}><FaSearch /></div>
+                </Link>
+            </div>    
+            <List
+                className={styles.totalListBox}
+            >
+                <VirtualList
+                    data={Products}
+                    height={600}
+                    itemHeight={47}
+                    itemKey='Product'
+                >
+                    {(item) => (
+                        <List.Item key={item.Product}>
+                            <div className={styles.cateBox}>
+                                <div className={styles.itemCate}>{item.cate}</div>                            
+                                <Row className={styles.itemBox}>
+                                    {renderCards}
+                                </Row>
+                                <Link to='/ItemList'>
+                                    <div className={styles.itemMore}>더보기</div>
+                                </Link>
+                            </div>
+                        </List.Item>
+                    )}
+                </VirtualList>
+            </List>
             
-
-            <button className={styles.loadMore}>더보기</button>
             <Navbar />
-            </div>
         </div>
     )
 }

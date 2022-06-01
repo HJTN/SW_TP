@@ -10,12 +10,9 @@
 
 .Title{
     position: absolute;
-    width: 150px;
+    width: 140px;
     height: 30px;
-    left: 137px;
-    width: 150px;
-    height: 30px;
-    left: 137px;
+    left: 131px;
     top: 0px;
     
     font-family: 'Roboto';
@@ -44,7 +41,7 @@
 .Searchicon{
     position: absolute;
     color: #FF897B;
-    width: 375px;
+    width: 240px;
     height: 87px;
     left: 320px;
     align-items: center;

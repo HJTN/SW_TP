@@ -36,6 +36,7 @@ function App() {
       <Route path="/UploadQuestion" exact element={<UploadQuestion />}/>
       <Route path="/DetailNoti" exact element={<DetailNoti />}/>
       <Route path="/DetailQues" exact element={<DetailQues />}/>
+      <Route path="/ItemList" exact element={<ItemList />}/>
     </Routes>
   );
 }
