@@ -1,21 +1,31 @@
 .Mainbox { 
-    width: 300px; 
-    height: 55px; 
-    Top:-20px;
+    position: absolute;
+    width: 375px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+
     background: #FFE4E1;
 }
 
 .Title{
     position: absolute;
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: normal;
+    width: 100px;
+    height: 30px;
+    left: 141px;
+    top: 0px;
+    
+    font-family: 'Roboto';
     font-style: normal;
-    align-items: center;   
-    Width:200px;
-    height: 40px;
-    Left: 125px;
-    Top: 3px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.165px;
+    
+    color: #000000;
 }
 
 .Backicon{
@@ -31,16 +41,145 @@
 .Searchicon{
     position: absolute;
     color: #FF897B;
-    width: 240px;
+    width: 375px;
     height: 87px;
-    left: 270px;
+    left: 320px;
     align-items: center;
     top: 28px;
 }
 
+.Shareicon{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    left: 63px;
+    top: 240px;
+    z-index: 1;
+}
+
+.lenticon{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    left: 130px;
+    top: 240px;
+    z-index: 1;
+}
+
+.qnaicon{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    left: 200px;
+    top: 240px;
+    z-index: 1;
+}
+
+.chaticon{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    left: 270px;
+    top: 240px;
+    z-index: 1;
+}
+
+.shareindex{
+    position: absolute;
+    width: 80px;
+    height: 12px;
+    left: 48px;
+    top: 280px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.165px;
+    z-index: 1;
+
+    color: #000000;
+}
+
+.lentindex{
+    position: absolute;
+    width: 80px;
+    height: 12px;
+    left: 117px;
+    top: 280px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.165px;
+    z-index: 1;
+
+    color: #000000;
+}
+
+.qnaindex{
+    position: absolute;
+    width: 80px;
+    height: 12px;
+    left: 200px;
+    top: 280px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.165px;
+    z-index: 1;
+
+    color: #000000;
+}
+
+.chatindex{
+    position: absolute;
+    width: 80px;
+    height: 12px;
+    left: 275px;
+    top: 280px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.165px;
+    z-index: 1;
+
+    color: #000000;
+}
+
+
 .Userbox{
     position: absolute;
-    width: 300px; 
+    width: 375px; 
     height: 180px; 
     Top: 63px;
     background: #F8B2AA;
@@ -56,15 +195,17 @@
 }
 
 .rectangle {
+    box-sizing: border-box;
+
     position: absolute;
-    width: 235px;
-    height: 76px;
-    top: 210px;
-    left: 40px;
-    background: white;
-    border-style: solid;
-    border-width: 1px;
-    border-color: gray;
+    width: 304px;
+    height: 95px;
+    left: 36px;
+    top: 220px;
+    
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    border: 1px solid #C4C4C4;
   }
 
 .sharetext {
@@ -72,8 +213,8 @@
     width: 102px;
     height: 13px;
     left: 19px;
-    top: 300px;
-
+    top: 344px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -82,8 +223,9 @@
     display: flex;
     align-items: center;
     letter-spacing: -0.165px;
-
+    
     color: #000000;
+    
 
 }
 
@@ -92,8 +234,8 @@
     width: 102px;
     height: 13px;
     left: 19px;
-    top: 415px;
-
+    top: 471px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -102,30 +244,31 @@
     display: flex;
     align-items: center;
     letter-spacing: -0.165px;
-
+    
     color: #000000;
+    
 }
 
 .line1 {
     position: absolute;
-    width: 300px;
-    height: 0px;
-    left: 0px;
-    top: 402spx;
-    border: #FFE4E1;
-    border-style: solid;
-    border-width: 1px;
+    width: 375.03px;
+    height: 1.24px;
+    left: -0.03px;
+    top: 450.99px;
+    
+    border: 1px solid #FFE4E1;
+    transform: rotate(0.19deg);
 }
 
 .line2 {
     position: absolute;
-    width: 300px;
-    height: 0px;
+    width: 375.03px;
+    height: 1.24px;
     left: 0px;
-    top: 522px;
-    border: #FFE4E1;
-    border-style: solid;
-    border-width: 1px;
+    top: 581px;
+    
+    border: 1px solid #FFE4E1;
+    transform: rotate(0.19deg);
 }
 
 .pwtext{
@@ -133,8 +276,8 @@
     width: 102px;
     height: 13px;
     left: 19px;
-    top: 525px;
-
+    top: 595px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -143,8 +286,9 @@
     display: flex;
     align-items: center;
     letter-spacing: -0.165px;
-
+    
     color: #000000;
+    
 }
 
 .infotext{
@@ -152,8 +296,8 @@
     width: 102px;
     height: 13px;
     left: 19px;
-    top: 565px;
-
+    top: 650px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -162,7 +306,7 @@
     display: flex;
     align-items: center;
     letter-spacing: -0.165px;
-
+    
     color: #000000;
 }
 
@@ -171,8 +315,8 @@
     width: 102px;
     height: 13px;
     left: 19px;
-    top: 602px;
-
+    top: 715px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -181,8 +325,9 @@
     display: flex;
     align-items: center;
     letter-spacing: -0.165px;
-
+    
     color: #000000;
+    
 }
 
 .withdrawtext{
@@ -190,8 +335,8 @@
     width: 102px;
     height: 13px;
     left: 19px;
-    top: 640px;
-
+    top: 775px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -200,39 +345,39 @@
     display: flex;
     align-items: center;
     letter-spacing: -0.165px;
-
+    
     color: #000000;
 }
 
 .line3 {
     position: absolute;
-    width: 300px;
-    height: 0px;
+    width: 375.03px;
+    height: 1.24px;
     left: 0px;
-    top: 562px;
-    border: #FFE4E1;
-    border-style: solid;
-    border-width: 1px;
+    top: 640px;
+    
+    border: 1px solid #FFE4E1;
+    transform: rotate(0.19deg);
 }
 
 .line4 {
     position: absolute;
-    width: 300px;
-    height: 0px;
+    width: 375.03px;
+    height: 1.24px;
     left: 0px;
-    top: 602px;
-    border: #FFE4E1;
-    border-style: solid;
-    border-width: 1px;
+    top: 700px;
+    
+    border: 1px solid #FFE4E1;
+    transform: rotate(0.19deg);
 }
 
 .line5 {
     position: absolute;
-    width: 300px;
-    height: 0px;
+    width: 375.03px;
+    height: 1.24px;
     left: 0px;
-    top: 642px;
-    border: #FFE4E1;
-    border-style: solid;
-    border-width: 1px;
+    top: 760px;
+    
+    border: 1px solid #FFE4E1;
+    transform: rotate(0.19deg);
 }

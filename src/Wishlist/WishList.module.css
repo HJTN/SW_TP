@@ -1,21 +1,31 @@
 .Mainbox { 
-    width: 300px; 
-    height: 55px; 
-    Top:-20px;
+    position: absolute;
+    width: 375px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+
     background: #FFE4E1;
 }
 
 .Title{
     position: absolute;
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: normal;
+    width: 150px;
+    height: 30px;
+    left: 137px;
+    top: 0px;
+    
+    font-family: 'Roboto';
     font-style: normal;
-    align-items: center;   
-    Width:200px;
-    height: 40px;
-    Left: 116px;
-    Top: 3px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.165px;
+    
+    color: #000000;
 }
 
 .Backicon{
@@ -31,9 +41,9 @@
 .Searchicon{
     position: absolute;
     color: #FF897B;
-    width: 240px;
+    width: 375px;
     height: 87px;
-    left: 270px;
+    left: 320px;
     align-items: center;
     top: 28px;
 }

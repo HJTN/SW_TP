@@ -1,7 +1,7 @@
 import React, { useState }from 'react'
 import { Link } from 'react-router-dom';
 import styles from './ItemInfo.module.css';
-import Navbar from './Navbar';
+import Navbar from '../Navbar/Navbar';
 import { FaChevronLeft, FaRegUser } from "react-icons/fa";
 import { BiCloset } from 'react-icons/bi'
 

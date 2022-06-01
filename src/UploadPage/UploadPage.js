@@ -33,12 +33,12 @@ function UploadPage()
             <br/>
             <button className={styles.RegisterBtn}>등록</button>
             <form>
-                <FileUpload refreshFunction={updateImages} />
+                <div className={styles.drop}><FileUpload refreshFunction={updateImages} /></div>
                 <br />
                 <input className={styles.WriteTitle} placeholder="글 제목.." value={Title}/> 
                 <br />
                 <br />
-                <textarea className={styles.info} style={{width: 300, height: 200 }}>상세정보..</textarea>
+                <textarea className={styles.info} style={{width: 300, height: 250 }}>상세정보..</textarea>
             </form>
             <Navbar />
         </div>
