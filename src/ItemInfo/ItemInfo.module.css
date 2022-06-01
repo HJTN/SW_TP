@@ -40,24 +40,25 @@
 
 .Itembox{
     position: absolute;
-    width: 300px; 
+    width: 375px; 
     height: 200px; 
-    Top: 63px;
+    Top: 70px;
+    left: 0px;
     background: unset;
 }
 
 .Itemicon{
     position: absolute;
-    width: 240px;
+    width: 310px;
     height: 150px;
-    left: 30px;
+    left: 35px;
     top: 20px;
 }
 
 .itemChangeBtn{
     position: absolute;
     bottom: 15px;
-    left: 145px;
+    left: 180px;
     width: 10px;
     height: 10px;
     background-color: #FF897B;
@@ -66,9 +67,9 @@
 
 .midBox{
     position: absolute;
-    left: 24px;
+    left: 30px;
     top: 270px;
-    width: 270px;
+    width: 320px;
     height: 100px;
     padding-bottom: 10px;
     border-bottom: 1px solid #FFE4E1;
@@ -99,8 +100,9 @@
 
 .itemTitle{
     position: absolute;
-    right: 10px;
-    top: 50px;
+    right: 15px;
+    top: 40px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -108,7 +110,7 @@
     position: absolute;
     top: 410px;
     left: 30px;
-    width: 270px;
+    width: 320px;
     height: fit-content;
     white-space: pre-wrap;
 }
@@ -116,8 +118,8 @@
 .controlBox{
     position: absolute;
     left: 30px;
-    bottom: 80px;
-    width: 270px;
+    bottom: 100px;
+    width: 320px;
 }
 
 .controlChat{

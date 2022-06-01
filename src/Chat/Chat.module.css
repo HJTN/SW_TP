@@ -1,7 +1,10 @@
 .Mainbox {
-    position: fixed;
-    width: 300px; 
-    height: 55px;
+    position: absolute;
+    width: 375px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+
     background: #FFE4E1;
 }
 
@@ -10,29 +13,36 @@
     width: 20px;
     height: 20px;
     left: 28px;
-    top: 18px;
-    align-items: center;
+    top: 28px;
     color: #FF897B;
+    align-items: center;
 }
 
 .Title{
     position: absolute;
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: normal;
+    width: 100px;
+    height: 30px;
+    left: 161px;
+    top: 0px;
+    
+    font-family: 'Roboto';
     font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
     align-items: center;
-    width: fit-content;
-    height: fit-content;
-    Left: 140px;
-    Top: -4px;
+    text-align: center;
+    letter-spacing: -0.165px;
+    
+    color: #000000;
 }
 
 .registerBox{
     position: fixed;
-    bottom: 80px;
-    left: 20px;
-    width: 280px;
+    bottom: 100px;
+    left: 30px;
+    width: 320px;
     height: 55px;
     background-color: unset;
     border: 2px solid #FF897B;
@@ -43,7 +53,7 @@
     position: absolute;
     top: 20px;
     left: 15px;
-    width: 180px;
+    width: 210px;
     height: 20px;
     outline: none;
     border: none;
@@ -53,7 +63,7 @@
 .registerBtn{
     position: absolute;
     top: 20px;
-    left: 210px;
+    right: 10px;
     width: 60px;
     height: 20px;
     border-radius: 5px;
@@ -68,9 +78,9 @@
 
 .chatListBox {
     position: absolute;
-    top: 60px;
-    left: 8px;
-    width: 300px;
+    top: 70px;
+    left: 0px;
+    width: 375px;
     height: fit-content;
     list-style: none;
 }
@@ -79,7 +89,7 @@
     position: relative;
     top: 0px;
     left: 0px;
-    width: 300px;
+    width: 375px;
     height: 60px;
     border-bottom: 1px solid #c4c4c4;
 }
@@ -87,7 +97,7 @@
 .renderItem{
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 20px;
     height: fit-content;
     font-size: 18px;
     font-weight: bold;
@@ -97,7 +107,7 @@
 .renderDate{
     position: absolute;
     top: 40px;
-    left: 10px;
+    left: 20px;
     height: fit-content;
     color: #c4c4c4;
     font-size: 8px;
