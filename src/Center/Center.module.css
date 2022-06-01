@@ -4,7 +4,6 @@
     height: 70px;
     left: 0px;
     top: 0px;
-
     background: #FFE4E1;
 }
 
@@ -40,7 +39,7 @@
 
 .notifyBox{
     position: absolute;
-    width: 270px;
+    width: 340px;
     height: 270px;
     left: 20px;
     top: 100px;
@@ -48,7 +47,7 @@
 
 .questionBox{
     position: absolute;
-    width: 270px;
+    width: 340px;
     height: 270px;
     left: 20px;
     top: 400px;
@@ -68,7 +67,7 @@
 .itemList{
     position: absolute;
     top: 32px;
-    width: 270px;
+    width: 340px;
     height: 220px;
 }
 
@@ -95,7 +94,7 @@
     position: relative;
     top: 10px;
     left: -40px;
-    width: 270px;
+    width: 340px;
     height: fit-content;
     margin-bottom: 20px;
     background-color: unset;
@@ -104,7 +103,7 @@
 .renderInBox{
     position: relative;
     left: 30px;
-    width: 240px;
+    width: 300px;
     height: 30px;
     border-bottom: 2px solid #FFE4E1; 
 }
@@ -121,7 +120,7 @@
     position: absolute;
     bottom: 100px;
     left: 70px;
-    width: 200px;
+    width: 280px;
     height: 60px;
 }
 
@@ -129,12 +128,12 @@
     position: absolute;
     bottom: 0px;
     left: 0px;
+    width: 240px;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 60px;
-    padding-right: 50px;
     font-family: Roboto;
     font-size: 15px;
+    text-align: center;
     color: white;
     border-radius: 5px;
     background-color: #FF897B;
@@ -142,7 +141,7 @@
 
 .speakerIcon{
     position: absolute;
-    left: 30px;
+    left: 50px;
     top: 8px;
     width: fit-content;
     height: fit-content;
@@ -150,7 +149,7 @@
 
 .runningText{
     position: absolute;
-    left: 30px;
+    left: 50px;
     top: 30px;
     font-size: 10px;
     color: #FF897B;

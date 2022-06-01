@@ -8,6 +8,16 @@
     background: #FFE4E1;
 }
 
+.backIcon{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 28px;
+    color: #FF897B;
+    align-items: center;
+}
+
 .Title{
     position: absolute;
     width: 130px;

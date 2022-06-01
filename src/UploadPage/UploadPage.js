@@ -4,6 +4,8 @@ import { FaSearch, FaChevronLeft } from "react-icons/fa";
 import FileUpload from '../Utils/FileUpload';
 import styles from "./UploadPage.module.css";
 import Navbar from '../Navbar/Navbar';
+import { BiCloset } from 'react-icons/bi'
+import { AiOutlinePlusCircle } from 'react-icons/ai'
 
 function UploadPage() 
 {
@@ -19,10 +21,25 @@ function UploadPage()
         setImages(newImages)
     }
 
-    return(
+    const handleRegister = () => {
+        alert('clicked!');
+    }
+
+    const handleClick = () => {
+        alert('Clicked!')
+    }
+
+    return (
         <div>
-            <div className={styles.box}>
-            <h2 className={styles.Title}>공유하기</h2>
+            <div className={styles.Mainbox}>
+                <Link to={'/Center'} /* 이전 페이지로 이동 구현 필요*/>
+                    <div className={styles.backIcon}><FaChevronLeft /></div>
+                </Link>
+                <h2 className={styles.Title}>공유하기</h2>
+            </div>
+            <div className={styles.Itembox}>
+                <div className={styles.Itemicon} ><BiCloset size='6x' /></div>
+                <div className={styles.itemChangeBtn} onClick={handleClick}><AiOutlinePlusCircle size='4em'/></div>
             </div>
             <Link to={'/Main'}>
                 <div className={styles.Backicon}><FaChevronLeft /></div>

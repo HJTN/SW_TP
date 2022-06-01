@@ -69,7 +69,7 @@ function WishList()
                                 <div className={styles.renderItemName}>{item.itemName}</div>
                                 <div className={styles.renderPrice}>{item.price}</div>
                                 <div className={styles.renderPeriod}>{item.period}</div>
-                                <Link to={''} style={{textDecoration: 'none'}} className={styles.renderMore}>
+                                <Link to={'/ItemInfo'} style={{textDecoration: 'none'}} className={styles.renderMore}>
                                     상세보기
                                 </Link>
                             </div>

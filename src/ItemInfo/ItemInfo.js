@@ -19,8 +19,8 @@ function ItemInfo()
         <div>       
             <div className={styles.Mainbox}>
                 <h2 className={styles.Title}>상세정보</h2>
-                <Link to={'/Main'}>
-                    <div className={styles.Backicon}><FaChevronLeft /></div>
+                <Link to={'/WishList'}>
+                    <div className={styles.backIcon}><FaChevronLeft /></div>
                 </Link>
             </div>
             <div className={styles.Itembox}>

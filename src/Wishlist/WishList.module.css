@@ -10,9 +10,15 @@
 
 .Title{
     position: absolute;
+<<<<<<< HEAD
     width: 150px;
     height: 30px;
     left: 137px;
+=======
+    width: 140px;
+    height: 30px;
+    left: 131px;
+>>>>>>> upstream/main
     top: 0px;
     
     font-family: 'Roboto';
@@ -61,8 +67,8 @@
 .chatListBox {
     position: absolute;
     top: 140px;
-    left: 8px;
-    width: 300px;
+    left: 0px;
+    width: 375px;
     height: fit-content;
     list-style: none;
 }
@@ -71,7 +77,7 @@
     position: relative;
     top: 0px;
     left: 0px;
-    width: 300px;
+    width: 375px;
     height: 120px;
     padding-bottom: 5px;
     background-color: unset;
@@ -81,7 +87,7 @@
 .renderImage{
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 20px;
     width: 80px;
     height: 80px;
 }
@@ -90,7 +96,7 @@
     position: absolute;
     top: 10px;
     left: 100px;
-    width: 200px;
+    width: 260px;
     height: fit-content;
     font-size: 18px;
     font-weight: bold;
@@ -101,8 +107,8 @@
 .renderItemName{
     position: absolute;
     top: 40px;
-    left: 90px;
-    width: 200px;
+    left: 100px;
+    width: 260px;
     height: fit-content;
     font-size: 14px;
     word-break: break-all;
@@ -111,8 +117,8 @@
 .renderPrice{
     position: absolute;
     top: 60px;
-    left: 90px;
-    width: 100px;
+    left: 100px;
+    width: 130px;
     height: fit-content;
     font-size: 14px;
     color: #FF897B;
@@ -122,8 +128,8 @@
 .renderPeriod{
     position: absolute;
     top: 60px;
-    left: 190px;
-    width: 100px;
+    left: 230px;
+    width: 130px;
     height: fit-content;
     font-size: 14px;
     word-break: break-all;
@@ -131,7 +137,7 @@
 
 .renderMore{
     position: absolute;
-    bottom: 5px;
+    bottom: 10px;
     right: 10px;
     width: 80px;
     height: fit-content;

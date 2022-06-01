@@ -68,6 +68,7 @@ function Refer()
             <div className={styles.block}>
                 <SearchFeature
                     refreshFunction={updateSearchTerm}
+                    className={styles.searchStyle}
                 />
 
                 <Row gutter={[16, 16]} /*gutter여백넣기*/>

@@ -1,4 +1,4 @@
-.box { 
+.Mainbox {
     position: absolute;
     width: 375px;
     height: 70px;
@@ -6,6 +6,16 @@
     top: 0px;
 
     background: #FFE4E1;
+}
+
+.backIcon{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 28px;
+    top: 28px;
+    color: #FF897B;
+    align-items: center;
 }
 
 .Title{
@@ -28,9 +38,11 @@
     color: #000000;
 }
 
-.RegisterBtn{
+.registerBtn{
     position: absolute;
-    width: 65px;
+    top: 90px;
+    left: 300px;
+    width: 60px;
     height: 25px;
     left: 292px;
     top: 87px;
@@ -41,69 +53,63 @@
     color: white;
 }
 
-.Backicon{
+.Itembox{
     position: absolute;
-    color: #FF897B;
-    width: 240px;
-    height: 87px;
-    left: 28px;
-    align-items: center;
-    top: 28px;
+    width: 375px; 
+    height: 160px; 
+    Top: 120px;
+    left: 0px;
+    background: unset;
 }
 
-.Searchicon{
+.Itemicon{
     position: absolute;
-    color: #FF897B;
-    width: 240px;
-    height: 87px;
-    left: 320px;
-    align-items: center;
-    top: 28px;
+    width: 310px;
+    height: 150px;
+    left: 35px;
+    top: 0px;
 }
 
-.WriteTitle{
+.itemChangeBtn{
     position: absolute;
+    bottom: 5px;
+    right: 20px;
+    color: grey;
+}
+
+.registerTitle{
+    position: absolute;
+    top: 320px;
+    left: 30px;
     width: 300px;
-    height: 28px;
-    left: 38px;
-    top: 445px;
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
+    height: fit-content;
+    padding: 5px;
+    outline: none;
+    border: none;
+    background-color: unset;
+    border-bottom: 2px solid #FF897B;
     font-size: 24px;
-    line-height: 28px;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    letter-spacing: -0.165px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    
-    color: #C4C4C4;
 }
 
-/*
+.contentTitle{
     position: absolute;
-    width: 300px;
-
+    top: 380px;
+    left: 30px;
+    width: fit-content;
+    height: fit-content;
+    margin: unset;
+    background-color: unset;
     font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 11px;
-    text-align: left;
-    letter-spacing: -0.165px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    color: #979797;
-*/
+    font-size: 20px;
+    color: #FF897B;
+}
 
-.info {
+.registerContent{
     position: absolute;
+    top: 420px;
+    left: 30px;
     width: 300px;
+<<<<<<< HEAD
     height: 270px;
     left: 38px;
     top: 520px;
@@ -124,4 +130,14 @@
     position: absolute;
     top: 150px;
     left: 38px;
+=======
+    height: 300px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: unset;
+    border: 2px solid #FF897B;
+    resize: none;
+    font-size: 14px;
+>>>>>>> upstream/main
 }
