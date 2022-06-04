@@ -54,7 +54,7 @@
 .Itembox{
     position: absolute;
     width: 375px; 
-    height: 160px; 
+    height: 300px; 
     Top: 120px;
     left: 0px;
     background: unset;
@@ -76,6 +76,13 @@
     color: grey;
 }
 
+.imageDrop{
+    position: absolute;
+    top: 150px;
+    left: 38px;
+    height: 300px;
+}
+
 .registerTitle{
     position: absolute;
     top: 445px;
@@ -85,7 +92,6 @@
     padding: 5px;
     outline: none;
     border: none;
-    background-color: unset;
     border-bottom: 2px solid #FF897B;
     font-size: 24px;
 }
@@ -105,12 +111,10 @@
 
 .registerContent{
     position: absolute;
-    top: 420px;
+    top: 520px;
     left: 30px;
     width: 300px;
     height: 270px;
-    left: 38px;
-    top: 520px;
 
     font-family: 'Roboto';
     font-style: normal;
@@ -129,8 +133,6 @@
     top: 150px;
     left: 38px;
     height: 300px;
-    outline: none;
-    border: none;
     border-radius: 5px;
     background-color: unset;
     resize: none;

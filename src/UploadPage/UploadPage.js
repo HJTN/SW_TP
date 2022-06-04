@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
+import axios from 'axios';
 import { FaSearch, FaChevronLeft } from "react-icons/fa";
 import FileUpload from '../Utils/FileUpload';
 import styles from "./UploadPage.module.css";
@@ -7,20 +8,45 @@ import Navbar from '../Navbar/Navbar';
 import { BiCloset } from 'react-icons/bi'
 import { AiOutlinePlusCircle } from 'react-icons/ai'
 
-function UploadPage() 
+function UploadPage(props) 
 {
     const [Title, setTitle] = useState("")
-    const [Body, setBody] = useState("")
+    const [Description, setDescription] = useState("")
     const [Images, setImages] = useState([])
+    const navigate = useNavigate();
 
     const titleChangeHandler = (event) => {
         setTitle(event.currentTarget.value)
+    }
+
+    const descriptionChangeHandler = (event) => {
+        setDescription(event.currentTarget.value)
     }
 
     const updateImages = (newImages) => {
         setImages(newImages)
     }
 
+    const submitHandler = (event) => {
+        event.preventDefault();
+
+        //채운 값들을 서버에 request로 보낸다.
+        const body = {
+            title: Title,
+            description: Description,
+            images: Images
+        }
+
+        axios.post('http://34.64.45.39:8000/Cloth/', body)
+            .then(response => {
+                alert("상품 업로드에 성공했습니다.")
+                navigate('/Main');
+            }).catch(function(e){
+                alert(event);
+            })
+    }
+
+    /*
     const handleRegister = () => {
         alert('clicked!');
     }
@@ -28,18 +54,19 @@ function UploadPage()
     const handleClick = () => {
         alert('Clicked!')
     }
+    */
 
     return (
         <div>
             <div className={styles.Mainbox}>
-                <Link to={'/Center'} /* 이전 페이지로 이동 구현 필요*/>
+                <Link to={'/Main'}>
                     <div className={styles.backIcon}><FaChevronLeft /></div>
                 </Link>
                 <h2 className={styles.Title}>공유하기</h2>
             </div>
             <div className={styles.Itembox}>
                 <div className={styles.Itemicon} ><BiCloset size='300' /></div>
-                <div className={styles.itemChangeBtn} onClick={handleClick}><AiOutlinePlusCircle size='4em'/></div>
+                <div className={styles.itemChangeBtn}><AiOutlinePlusCircle size='4em'/></div>
             </div>
             <Link to={'/Main'}>
                 <div className={styles.Backicon}><FaChevronLeft /></div>
@@ -48,15 +75,17 @@ function UploadPage()
                 <div className={styles.Searchicon}><FaSearch /></div>
             </Link>
             <br/>
-            <button className={styles.registerBtn}>등록</button>
-            <form>
+            
+            <form onSubmit={(e)=>submitHandler(e)}>
+                <button className={styles.registerBtn}>등록</button>
                 <div className={styles.drop}><FileUpload refreshFunction={updateImages} /></div>
                 <br />
-                <input className={styles.registerTitle} placeholder="글 제목.." value={Title}/> 
+                <input className={styles.registerTitle} placeholder="글 제목.." onChange={titleChangeHandler} value={Title}/> 
                 <br />
                 <br />
-                <textarea className={styles.registerContent} style={{width: 300, height: 250 }}>상세정보..</textarea>
+                <textarea className={styles.registerContent} onChange={descriptionChangeHandler} value={Description}>상세정보를 입력하세요.</textarea>
             </form>
+
             <Navbar />
         </div>
     )
