@@ -53,7 +53,7 @@
     width: 50px;
     height: 100px;
     left: 63px;
-    top: 240px;
+    top: 300px;
     z-index: 1;
 }
 
@@ -62,7 +62,7 @@
     width: 50px;
     height: 100px;
     left: 130px;
-    top: 240px;
+    top: 300px;
     z-index: 1;
 }
 
@@ -71,7 +71,7 @@
     width: 50px;
     height: 100px;
     left: 200px;
-    top: 240px;
+    top: 300px;
     z-index: 1;
 }
 
@@ -80,7 +80,7 @@
     width: 50px;
     height: 100px;
     left: 270px;
-    top: 240px;
+    top: 300px;
     z-index: 1;
 }
 
@@ -89,7 +89,7 @@
     width: 80px;
     height: 12px;
     left: 48px;
-    top: 280px;
+    top: 340px;
 
     font-family: 'Roboto';
     font-style: normal;
@@ -112,7 +112,7 @@
     width: 80px;
     height: 12px;
     left: 117px;
-    top: 280px;
+    top: 340px;
 
     font-family: 'Roboto';
     font-style: normal;
@@ -135,7 +135,7 @@
     width: 80px;
     height: 12px;
     left: 200px;
-    top: 280px;
+    top: 340px;
 
     font-family: 'Roboto';
     font-style: normal;
@@ -158,7 +158,7 @@
     width: 80px;
     height: 12px;
     left: 275px;
-    top: 280px;
+    top: 340px;
 
     font-family: 'Roboto';
     font-style: normal;
@@ -180,7 +180,7 @@
 .Userbox{
     position: absolute;
     width: 375px; 
-    height: 180px; 
+    height: 250px; 
     Top: 70px;
     background: #F8B2AA;
 }
@@ -191,7 +191,27 @@
     height: 100px;
     left: 25px;
     align-items: center;
-    top: 42px;
+    top: 52px;
+}
+
+.userIndex{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 170px;
+    align-items: center;
+    top: 120px;
+    z-index: 1;
+}
+
+.userId{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 195px;
+    align-items: center;
+    top: 150px;
+    z-index: 1;
 }
 
 .rectangle {
@@ -199,89 +219,26 @@
 
     position: absolute;
     width: 304px;
-    height: 95px;
+    height: 120px;
     left: 36px;
-    top: 220px;
+    top: 270px;
     
     background: #FFFFFF;
     mix-blend-mode: normal;
     border: 1px solid #C4C4C4;
   }
 
-.sharetext {
-    position: absolute;
-    width: 102px;
-    height: 13px;
-    left: 19px;
-    top: 344px;
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 15px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.165px;
-    
-    color: #000000;
-    
-
-}
-
-.lenttext {
-    position: absolute;
-    width: 102px;
-    height: 13px;
-    left: 19px;
-    top: 471px;
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 15px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.165px;
-    
-    color: #000000;
-    
-}
-
-.line1 {
-    position: absolute;
-    width: 375.03px;
-    height: 1.24px;
-    left: -0.03px;
-    top: 450.99px;
-    
-    border: 1px solid #FFE4E1;
-    transform: rotate(0.19deg);
-}
-
-.line2 {
-    position: absolute;
-    width: 375.03px;
-    height: 1.24px;
-    left: 0px;
-    top: 581px;
-    
-    border: 1px solid #FFE4E1;
-    transform: rotate(0.19deg);
-}
-
 .pwtext{
     position: absolute;
-    width: 102px;
+    width: 150px;
     height: 13px;
     left: 19px;
-    top: 595px;
+    top: 540px;
     
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 20px;
     line-height: 15px;
     display: flex;
     align-items: center;
@@ -293,15 +250,15 @@
 
 .infotext{
     position: absolute;
-    width: 102px;
+    width: 150px;
     height: 13px;
     left: 19px;
-    top: 650px;
+    top: 620px;
     
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 20px;
     line-height: 15px;
     display: flex;
     align-items: center;
@@ -312,15 +269,15 @@
 
 .connecttext{
     position: absolute;
-    width: 102px;
+    width: 150px;
     height: 13px;
     left: 19px;
-    top: 715px;
+    top: 695px;
     
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 20px;
     line-height: 15px;
     display: flex;
     align-items: center;
@@ -332,7 +289,7 @@
 
 .withdrawtext{
     position: absolute;
-    width: 102px;
+    width: 150px;
     height: 13px;
     left: 19px;
     top: 775px;
@@ -340,7 +297,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 20px;
     line-height: 15px;
     display: flex;
     align-items: center;
@@ -354,7 +311,7 @@
     width: 375.03px;
     height: 1.24px;
     left: 0px;
-    top: 640px;
+    top: 600px;
     
     border: 1px solid #FFE4E1;
     transform: rotate(0.19deg);
@@ -365,7 +322,7 @@
     width: 375.03px;
     height: 1.24px;
     left: 0px;
-    top: 700px;
+    top: 680px;
     
     border: 1px solid #FFE4E1;
     transform: rotate(0.19deg);

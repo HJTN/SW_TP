@@ -30,6 +30,7 @@ function Login() {
       if(response.data){
         navigate('/Main');
         setUser(response.data.u_id);
+        <MyInfo user={user} />
       } else {
         alert("로그인에 실패했습니다.");
       }

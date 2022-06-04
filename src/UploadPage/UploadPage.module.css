@@ -96,6 +96,19 @@
     font-size: 24px;
 }
 
+/*.contentTitle{
+    position: absolute;
+    top: 380px;
+    left: 30px;
+    width: fit-content;
+    height: fit-content;
+    margin: unset;
+    background-color: unset;
+    font-family: Roboto;
+    font-size: 20px;
+    color: #FF897B;
+}*/
+
 .registerContent{
     position: absolute;
     top: 520px;
@@ -112,8 +125,17 @@
     align-items: center;
     letter-spacing: -0.165px;
 
-    outline: none;
-    border: 1px solid #FF897B;
+    color: #000000;
+}
+
+.drop {
+    position: absolute;
+    top: 150px;
+    left: 38px;
+    height: 300px;
     border-radius: 5px;
+    background-color: unset;
     resize: none;
+    font-size: 14px;
+
 }
