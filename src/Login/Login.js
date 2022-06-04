@@ -66,7 +66,6 @@ function Login() {
           <button className={styles.joinBtn}>회원가입</button>
         </Link>
       </form>
-      <MyInfo user={user} />;
     </div>
   );
 }

@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import Dropzone from 'react-dropzone';
+import axios from "axios";
 
 function FileUpload(props) 
 {
     const [Images, setImages] = useState([])
 
-    /*const dropHandler = (files) => {
+    const dropHandler = (files) => {
 
         let formData = new FormData(); // FormData안에는 전달하는 파일의 정보
         const config = {
@@ -13,7 +14,7 @@ function FileUpload(props)
         }        
         formData.append("file", files[0])
 
-        axios.post('url', formData, config)
+        axios.post('http://34.64.45.39:8000/Cloth/', formData, config)
             .then(response => {
                 if(response.data.success) {
                     setImages([...Images, response.data.filePath])
@@ -23,7 +24,7 @@ function FileUpload(props)
                     alert('파일을 저장하는데 실패했습니다.')
                 }
             })
-    }*/
+    }
 
     return (
         <div style={{display: 'flex', justifyContent: 'space-between'}}>
