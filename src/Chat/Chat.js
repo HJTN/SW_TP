@@ -16,12 +16,12 @@ function Chat()
     useEffect(() => {
         axios.get('http://34.64.45.39:8000/Comment/')
             .then(response => {
-                console.log(response.data)
                 if (response.data) {
                     setChats(response.data)
                 } else {
                     alert("댓글을 가져오는데 실패했습니다.")
                 }
+                console.log(response.data)
             }).catch(error => {
                 console.log(error)
             });

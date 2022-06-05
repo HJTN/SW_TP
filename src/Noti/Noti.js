@@ -9,19 +9,19 @@ import axios from "axios";
 
 function Noti()
 {
-    const [notis, setNotis] = useState(['공지1', '공지2', '공지3', '공지4', '공지5', '공지6','공지7','공지8','공지9','공지10','공지11','공지12'])
+    const [notis, setNotis] = useState(['공지1', '공지2', '공지3', '공지4', '공지5', '공지6','공지7','공지8','공지9','공지10','공지11','공지12','공지13','공지14','공지15','공지16','공지17'])
 
     useEffect(() => {
         axios.get('url')
-            .then(response => {
-                if (response.data.success) {
-                    setNotis([...notis, response.data])
-                } else {
-                    alert("공지사항을 가져오는데 실패했습니다.")
-                }
-            }).catch(error => {
-                console.log(error)
-            });
+        .then(response => {
+            if (response.data.success) {
+                setNotis([...notis, response.data])
+            } else {
+                alert("공지사항을 가져오는데 실패했습니다.")
+            }
+        }).catch(error => {
+            console.log(error)
+        });
     }, []);
 
     return (
@@ -40,7 +40,7 @@ function Noti()
             >
                 <VirtualList
                     data={notis}
-                    height={600}
+                    height={780}
                     itemHeight={47}
                     itemKey='Noti'
                 >
