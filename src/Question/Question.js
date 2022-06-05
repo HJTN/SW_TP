@@ -6,10 +6,24 @@ import { HiOutlineSpeakerphone} from 'react-icons/hi'
 import Navbar from '../Navbar/Navbar';
 import { List } from 'antd';
 import VirtualList from 'rc-virtual-list';
+import axios from "axios";
 
 function Question()
 {
     const [ques, setQues] = useState(['질문1', '질문2', '질문3', '질문4', '질문5', '질문6','질문7', '질문8', '질문9', '질문10', '질문11', '질문12'])
+
+    useEffect(() => {
+        axios.get('url')
+            .then(response => {
+                if (response.data.success) {
+                    setQues([...ques, response.data])
+                } else {
+                    alert("질문을 가져오는데 실패했습니다.")
+                }
+            }).catch(error => {
+                console.log(error)
+            });
+    }, []);
 
     return (
         <div>
