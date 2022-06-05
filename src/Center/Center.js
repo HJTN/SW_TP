@@ -13,20 +13,30 @@ function Center()
     const [ques, setQues] = useState(['질문1', '질문2', '질문3', '질문4'])
 
     useEffect(() => {
-        axios.get('url')
-            .then(response => {
-                if (response.data.success) {
-                    setNotis([...notis, response.data])
-                } else {
-                    alert("공지사항을  을 가져오는데 실패했습니다.")
-                }
-            }).catch(error => {
-                console.log(error)
-            });
+        // 최근 공지사항 4개 가져오기
         axios.get('url')
         .then(response => {
-            if(response.data.success) {
-                setQues([...ques, response.data])
+            if (response.data) {
+                response.data.map((data, idx) => {
+                    if (idx < 4) {
+                        setNotis([...notis, data])
+                    }
+                })
+            } else {
+                alert("공지사항을 가져오는데 실패했습니다.")
+            }
+        }).catch(error => {
+            console.log(error)
+        });
+        // 최근 공지사항 4개 가져오기
+        axios.get('url')
+        .then(response => {
+            if (response.data) {
+                response.data.map((data, idx) => {
+                    if (idx < 4) {
+                        setQues([...ques, data])
+                    }
+                })
             } else {
                 alert("질문을 가져오는데 실패했습니다.")
             }
