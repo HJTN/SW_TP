@@ -62,7 +62,7 @@ function WishList()
             >
                 <VirtualList
                     data={Cards}
-                    height={700}
+                    height={680}
                     itemHeight={47}
                     itemKey='Card'
                 >

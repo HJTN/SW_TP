@@ -12,38 +12,40 @@ function Center()
     const [notis, setNotis] = useState(['최신 공지 사항 제목1', '최신 공지 사항 제목2', '최신 공지 사항 제목3', '최신 공지 사항 제목4'])
     const [ques, setQues] = useState(['질문1', '질문2', '질문3', '질문4'])
 
-    useEffect(() => {
-        // 최근 공지사항 4개 가져오기
-        axios.get('url')
-        .then(response => {
-            if (response.data) {
-                response.data.map((data, idx) => {
-                    if (idx < 4) {
-                        setNotis([...notis, data])
-                    }
-                })
-            } else {
-                alert("공지사항을 가져오는데 실패했습니다.")
-            }
-        }).catch(error => {
-            console.log(error)
-        });
-        // 최근 공지사항 4개 가져오기
-        axios.get('url')
-        .then(response => {
-            if (response.data) {
-                response.data.map((data, idx) => {
-                    if (idx < 4) {
-                        setQues([...ques, data])
-                    }
-                })
-            } else {
-                alert("질문을 가져오는데 실패했습니다.")
-            }
-        }).catch(error => {
-            console.log(error)
-        });
-    }, []);
+    // useEffect(() => {
+    //     // 최근 공지사항 4개 가져오기
+    //     axios.get('http://34.64.45.39:8000/Notice/')
+    //     .then(response => {
+    //         if (response.data) {
+    //             response.data.map((data, idx) => {
+    //                 if (idx < 4) {
+    //                     setNotis([...notis, data])
+    //                 }
+    //             })
+    //         } else {
+    //             alert("공지사항을 가져오는데 실패했습니다.")
+    //         }
+    //     }).catch(error => {
+    //         alert('Error...')
+    //         console.log(error)
+    //     });
+    //     // 최근 질문사항 4개 가져오기
+    //     axios.get('http://34.64.45.39:8000/Qna/')
+    //     .then(response => {
+    //         if (response.data) {
+    //             response.data.map((data, idx) => {
+    //                 if (idx < 4) {
+    //                     setQues([...ques, data])
+    //                 }
+    //             })
+    //         } else {
+    //             alert("질문을 가져오는데 실패했습니다.")
+    //         }
+    //     }).catch(error => {
+    //         alert('Error...')
+    //         console.log(error)
+    //     });
+    // }, []);
 
     const renderNotiItem = (data) => {
         return (

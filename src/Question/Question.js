@@ -12,18 +12,18 @@ function Question()
 {
     const [ques, setQues] = useState(['질문1', '질문2', '질문3', '질문4', '질문5', '질문6','질문7', '질문8', '질문9', '질문10', '질문11', '질문12', '질문13', '질문14', '질문15', '질문16'])
 
-    useEffect(() => {
-        axios.get('url')
-        .then(response => {
-            if (response.data.success) {
-                setQues([...ques, response.data])
-            } else {
-                alert("질문을 가져오는데 실패했습니다.")
-            }
-        }).catch(error => {
-            console.log(error)
-        });
-    }, []);
+    // useEffect(() => {
+    //     axios.get('http://34.64.45.39:8000/Qna/')
+    //     .then(response => {
+    //         if (response.data.success) {
+    //             setQues([...ques, response.data])
+    //         } else {
+    //             alert("질문을 가져오는데 실패했습니다.")
+    //         }
+    //     }).catch(error => {
+    //         console.log(error)
+    //     });
+    // }, []);
 
     return (
         <div>
@@ -41,7 +41,7 @@ function Question()
             >
                 <VirtualList
                     data={ques}
-                    height={780}
+                    height={750}
                     itemHeight={47}
                     itemKey='Ques'
                 >

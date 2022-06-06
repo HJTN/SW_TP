@@ -28,10 +28,10 @@ function ItemInfo()
                 <div className={styles.itemChangeBtn} onClick={handleClick}></div>
             </div>
             <div className={styles.midBox}>
-                <div className={styles.userBox}>
+                <Link to={'/UserInfo'} className={styles.userBox}>
                     <div className={styles.userIcon}><FaRegUser size='50px' /></div>
                     <div className={styles.userID}>@ID</div>
-                </div>
+                </Link>
                 <div className={styles.itemTitle}>---------- 글 제목 ----------</div>
             </div>
             <div className={styles.itemContent}>
