@@ -29,7 +29,6 @@ function Chat()
 
     const onClick = () => {
         if (comment.trim().length > 0) {
-            let now = new Date();
             axios.post('http://34.64.45.39:8000/Comment/', {
                 cloth_id: 1,
                 u_id: 'dd',
@@ -42,6 +41,7 @@ function Chat()
                 alert(error);
                 console.log(error);
             });
+            // let now = new Date();
             // setChats([...Chats, {
             //     u_id: 'dd',
             //     comment: comment,
@@ -55,7 +55,6 @@ function Chat()
     const onKeyDown = (e) => {
         if (e.keyCode === 13) {
             if (comment.trim().length > 0) {
-                let now = new Date();
                 axios.post('http://34.64.45.39:8000/Comment/', {
                     cloth_id: 1,
                     u_id: 'dd',
@@ -68,6 +67,7 @@ function Chat()
                     alert(error);
                     console.log(error);
                 });
+                // let now = new Date();
                 // setChats([...Chats, {
                 //     u_id: 'dd',
                 //     comment: comment,

@@ -17,27 +17,29 @@ import ItemInfo from "./ItemInfo/ItemInfo";
 import DetailNoti from "./DetailNoti/DetailNoti";
 import DetailQues from "./DetailQues/DetailQues";
 import ItemList from './ItemList/ItemList';
+import UserInfo from './UserInfo/UserInfo';
 
 function App() {
   return (
     <Routes>
-      <Route path="/" exact element={<Login />} />
-      <Route path="/Join" exact element={<Join />} />
-      <Route path="/JoinFin" exact element={<JoinFin />} />
-      <Route path="/UploadPage" exact element={<UploadPage />} />
-      <Route path="/Main" exact element={<Main />} />
-      <Route path="/Refer" exact element={<Refer />} />
-      <Route path="/MyInfo" exact element={<MyInfo />} />
-      <Route path="/ItemInfo" exact element={<ItemInfo />} />
-      <Route path="/Center" exact element={<Center />}/>
-      <Route path="/Chat" exact element={<Chat />}/>
-      <Route path="/Noti" exact element={<Noti />}/>
-      <Route path="/Question" exact element={<Question />}/>
-      <Route path="/WishList" exact element={<WishList />}/>
-      <Route path="/UploadQuestion" exact element={<UploadQuestion />}/>
-      <Route path="/DetailNoti" exact element={<DetailNoti />}/>
-      <Route path="/DetailQues" exact element={<DetailQues />}/>
-      <Route path="/ItemList" exact element={<ItemList />}/>
+        <Route path="/" exact element={<Login />} />
+        <Route path="/Join" exact element={<Join />} />
+        <Route path="/JoinFin" exact element={<JoinFin />} />
+        <Route path="/UploadPage" exact element={<UploadPage />} />
+        <Route path="/Main" exact element={<Main />} />
+        <Route path="/Refer" exact element={<Refer />} />
+        <Route path="/MyInfo" exact element={<MyInfo />} />
+        <Route path="/ItemInfo" exact element={<ItemInfo />} />
+        <Route path="/Center" exact element={<Center />}/>
+        <Route path="/Chat" exact element={<Chat />}/>
+        <Route path="/Noti" exact element={<Noti />}/>
+        <Route path="/Question" exact element={<Question />}/>
+        <Route path="/WishList" exact element={<WishList />}/>
+        <Route path="/UploadQuestion" exact element={<UploadQuestion />}/>
+        <Route path="/DetailNoti" exact element={<DetailNoti />}/>
+        <Route path="/DetailQues" exact element={<DetailQues />}/>
+        <Route path="/ItemList" exact element={<ItemList />} />
+        <Route path="/UserInfo" exact element={<UserInfo />}/>
     </Routes>
   );
 }

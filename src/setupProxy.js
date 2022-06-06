@@ -14,19 +14,32 @@ module.exports = (app) => {
             }            
         )
     );
-    // Join
-    // app.use(
-    //     createProxyMiddleware(
-    //         ['/http://34.64.45.39:8000/User_info/'],
-    //         {
-    //             target: 'http://34.64.45.39:8000/User_info/',
-    //             changeOrigin: true,
-    //             pathRewrite: {
-    //                 '^/http://34.64.45.39:8000/User_info/': ''
-    //             },
-    //         }
-    //     )
-    // );
+    // QnA
+    app.use(
+        createProxyMiddleware(
+            ['/http://34.64.45.39:8000/Qna/'],
+            {
+                target: 'http://34.64.45.39:8000/Qna/',
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/http://34.64.45.39:8000/Qna/': ''
+                },
+            }
+        )
+    );
+    // Notice
+    app.use(
+        createProxyMiddleware(
+            ['/http://34.64.45.39:8000/Notice/'],
+            {
+                target: 'http://34.64.45.39:8000/Notice/',
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/http://34.64.45.39:8000/Notice/': ''
+                },
+            }
+        )
+    );
     // temp
     // app.use(
     //     createProxyMiddleware(

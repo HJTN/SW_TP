@@ -66,7 +66,7 @@ function Main()
             >
                 <VirtualList
                     data={Products}
-                    height={780}
+                    height={750}
                     itemHeight={47}
                     itemKey='Product'
                 >
