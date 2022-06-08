@@ -4,11 +4,10 @@ import styles from './MyInfo.module.css';
 import Navbar from '../Navbar/Navbar';
 import { FaSearch, FaChevronLeft, FaRegUser, FaRegFile, FaBell, FaRegComments, FaRegFilePdf } from "react-icons/fa";
 
-function MyInfo({ user })
+function MyInfo({user})
 {
     //setU_id(u_id);
-    
-    console.log({user});
+    console.log({user})
     return(
         <div className={styles.Mainbox}>
             <h2 className={styles.Title}>내정보</h2>

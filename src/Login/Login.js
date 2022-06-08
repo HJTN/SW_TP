@@ -28,9 +28,9 @@ function Login() {
       password: password
     }).then(function(response){
       if(response.data){
-        navigate('/Main');
         setUser(response.data.u_id);
         <MyInfo user={user} />
+        navigate('/Main');
       } else {
         alert("로그인에 실패했습니다.");
       }
@@ -61,7 +61,7 @@ function Login() {
           onChange={onPasswordHandler}
         />
         <br></br>
-        <button className={styles.loginBtn}>로그인</button>
+        <button className={styles.loginBtn} >로그인</button>
         <br></br>
         <Link to="/Join">
           <button className={styles.joinBtn}>회원가입</button>

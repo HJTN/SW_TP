@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
+import {useDropzone} from 'react-dropzone';
 import axios from 'axios';
 import { FaSearch, FaChevronLeft } from "react-icons/fa";
-import FileUpload from '../Utils/FileUpload';
+//import FileUpload from '../Utils/FileUpload';
 import styles from "./UploadPage.module.css";
 import Navbar from '../Navbar/Navbar';
 import { BiCloset } from 'react-icons/bi'
@@ -22,13 +23,20 @@ function UploadPage(props)
     const descriptionChangeHandler = (event) => {
         setDescription(event.currentTarget.value)
     }
-
-    const updateImages = (newImages) => {
-        setImages(newImages)
+    
+    const onDrop = (acceptedFiles)=>{
+        const formData = new FormData();
+        const [file] = acceptedFiles;
+        formData.append("file", file);
     }
+    const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
 
     const submitHandler = (event) => {
         event.preventDefault();
+
+        if (!Title || !Description || !Images) {
+            return alert("모든 값을 넣어주셔야 합니다.") 
+         }
 
         //채운 값들을 서버에 request로 보낸다.
         const body = {
@@ -36,25 +44,17 @@ function UploadPage(props)
             description: Description,
             images: Images
         }
-
+        
         axios.post('http://34.64.45.39:8000/Cloth/', body)
             .then(response => {
-                alert("상품 업로드에 성공했습니다.")
-                navigate('/Main');
+                if(response.data) {
+                    alert("상품 업로드에 성공했습니다.")
+                    navigate('/Main');
+                }
             }).catch(function(e){
                 alert(event);
             })
     }
-
-    /*
-    const handleRegister = () => {
-        alert('clicked!');
-    }
-
-    const handleClick = () => {
-        alert('Clicked!')
-    }
-    */
 
     return (
         <div>
@@ -78,7 +78,14 @@ function UploadPage(props)
             
             <form onSubmit={(e)=>submitHandler(e)}>
                 <button className={styles.registerBtn}>등록</button>
-                <div className={styles.drop}><FileUpload refreshFunction={updateImages} /></div>
+                <div {...getRootProps()}>
+                    <input {...getInputProps()} />
+                    {isDragActive ? (
+                        <p>Drop the files here ...</p>
+                    ) : (
+                        <p>Drag 'n' drop some files here, or click to select files</p>
+                    )}
+                </div>
                 <br />
                 <input className={styles.registerTitle} placeholder="글 제목.." onChange={titleChangeHandler} value={Title}/> 
                 <br />
@@ -91,4 +98,6 @@ function UploadPage(props)
     )
 }
 
+
 export default UploadPage;
+
