@@ -78,9 +78,10 @@
 
 .imageDrop{
     position: absolute;
-    top: 150px;
-    left: 38px;
-    height: 300px;
+    top: 250px;
+    left: 150px;
+    height: 200px;
+    color: grey;
 }
 
 .registerTitle{

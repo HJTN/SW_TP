@@ -27,7 +27,7 @@ function ItemList()
     }, [])
     
     const getProduct = (body) => {
-        axios.post("http://34.64.45.39:8000/Cloth/", body) // request보낼때, 8개만 보내주라고 body랑 같이 보냄
+        axios.get("http://34.64.45.39:8000/Cloth/", body) // request보낼때, 8개만 보내주라고 body랑 같이 보냄
         .then(response => {
            if (response.data.success) {
                if(body.loadMore) {

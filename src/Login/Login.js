@@ -4,6 +4,7 @@ import axios from "axios";
 import styles from "./Login.module.css";
 import { Route, Routes, Link, useNavigate } from "react-router-dom";
 import MyInfo from "../MyInfo/MyInfo";
+import UploadPage from "../UploadPage/UploadPage";
 
 function Login() {
   // 기본 로그인
@@ -67,6 +68,7 @@ function Login() {
           <button className={styles.joinBtn}>회원가입</button>
         </Link>
       </form>
+      <UploadPage u_id={u_id} />
     </div>
   );
 }
