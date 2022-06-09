@@ -1,7 +1,6 @@
 import React, { useState, useEffect }from 'react'
 import useForm from 'react-hook-form';
 import { Link } from 'react-router-dom';
-import FileUpload from '../Utils/FileUpload';
 import styles from './Main.module.css';
 import { FaSearch } from "react-icons/fa";
 import Navbar from '../Navbar/Navbar';
