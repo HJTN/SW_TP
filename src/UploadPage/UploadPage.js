@@ -25,7 +25,6 @@ function UploadPage(props)
     const submit = (event) => {
         event.preventDefault();
         const upload_File = event.target[1].files[0];
-        console.log(upload_File);
         const formdata = new FormData();
         formdata.append('files', upload_File); //append(key, value)
         formdata.append('Title', Title);
