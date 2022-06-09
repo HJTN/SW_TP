@@ -10,20 +10,21 @@ import axios from "axios";
 
 function Question()
 {
-    const [ques, setQues] = useState(['질문1', '질문2', '질문3', '질문4', '질문5', '질문6','질문7', '질문8', '질문9', '질문10', '질문11', '질문12', '질문13', '질문14', '질문15', '질문16'])
+    const [ques, setQues] = useState([])
 
-    // useEffect(() => {
-    //     axios.get('http://34.64.45.39:8000/Qna/')
-    //     .then(response => {
-    //         if (response.data.success) {
-    //             setQues([...ques, response.data])
-    //         } else {
-    //             alert("질문을 가져오는데 실패했습니다.")
-    //         }
-    //     }).catch(error => {
-    //         console.log(error)
-    //     });
-    // }, []);
+    useEffect(() => {
+        axios.get('http://34.64.45.39:8000/Qna/')
+        .then(response => {
+            if (response.data) {
+                setQues(response.data)
+                console.log(ques)
+            } else {
+                alert("질문을 가져오는데 실패했습니다.")
+            }
+        }).catch(error => {
+            console.log(error)
+        });
+    }, []);
 
     return (
         <div>
@@ -48,9 +49,9 @@ function Question()
                     {(item) => (
                         <List.Item key={item.Ques}>
                             <div className={styles.renderItemBox}>
-                                <Link to={'/DetailQues'} style={{textDecoration: 'none'}} className={styles.linkStyle}>
+                                <Link to={'/DetailQues'} state={{data:item}} style={{ textDecoration: 'none' }} className={styles.linkStyle}>
                                     <div className={styles.renderInBox}>
-                                        <span className={styles.renderItem}>{item}</span>
+                                        <span className={styles.renderItem}>{item.title}</span>
                                     </div>
                                 </Link>
                             </div>

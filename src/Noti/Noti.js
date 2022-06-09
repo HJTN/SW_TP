@@ -9,21 +9,21 @@ import axios from "axios";
 
 function Noti()
 {
-    const [notis, setNotis] = useState(['공지1', '공지2', '공지3', '공지4', '공지5', '공지6','공지7','공지8','공지9','공지10','공지11','공지12','공지13','공지14','공지15','공지16','공지17'])
+    const [notis, setNotis] = useState([])
 
-    // useEffect(() => {
-    //     axios.get('http://34.64.45.39:8000/Notice/')
-    //     .then(response => {
-    //         if (response.data.success) {
-    //             setNotis([...notis, response.data])
-    //         } else {
-    //             alert("공지사항을 가져오는데 실패했습니다.")
-    //         }
-    //     }).catch(error => {
-    //         alert('Error...')
-    //         console.log(error)
-    //     });
-    // }, []);
+    useEffect(() => {
+        axios.get('http://34.64.45.39:8000/Notice/')
+        .then(response => {
+            if (response.data) {
+                setNotis(response.data)
+            } else {
+                alert("공지사항을 가져오는데 실패했습니다.")
+            }
+        }).catch(error => {
+            alert('Error...')
+            console.log(error)
+        });
+    }, []);
 
     return (
         <div>
@@ -48,9 +48,9 @@ function Noti()
                     {(item) => (
                         <List.Item key={item.Noti}>
                             <div className={styles.renderItemBox}>
-                                <Link to={'/DetailNoti'} style={{textDecoration: 'none'}} className={styles.linkStyle}>
+                                <Link to={'/DetailNoti'} state={{data:item}} style={{textDecoration: 'none'}} className={styles.linkStyle}>
                                     <div className={styles.renderInBox}>
-                                        <span className={styles.renderItem}>{item}</span>
+                                        <span className={styles.renderItem}>{item.title}</span>
                                     </div>
                                 </Link>
                             </div>

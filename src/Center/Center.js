@@ -9,50 +9,50 @@ import axios from "axios";
 
 function Center()
 {
-    const [notis, setNotis] = useState(['최신 공지 사항 제목1', '최신 공지 사항 제목2', '최신 공지 사항 제목3', '최신 공지 사항 제목4'])
-    const [ques, setQues] = useState(['질문1', '질문2', '질문3', '질문4'])
-
-    // useEffect(() => {
-    //     // 최근 공지사항 4개 가져오기
-    //     axios.get('http://34.64.45.39:8000/Notice/')
-    //     .then(response => {
-    //         if (response.data) {
-    //             response.data.map((data, idx) => {
-    //                 if (idx < 4) {
-    //                     setNotis([...notis, data])
-    //                 }
-    //             })
-    //         } else {
-    //             alert("공지사항을 가져오는데 실패했습니다.")
-    //         }
-    //     }).catch(error => {
-    //         alert('Error...')
-    //         console.log(error)
-    //     });
-    //     // 최근 질문사항 4개 가져오기
-    //     axios.get('http://34.64.45.39:8000/Qna/')
-    //     .then(response => {
-    //         if (response.data) {
-    //             response.data.map((data, idx) => {
-    //                 if (idx < 4) {
-    //                     setQues([...ques, data])
-    //                 }
-    //             })
-    //         } else {
-    //             alert("질문을 가져오는데 실패했습니다.")
-    //         }
-    //     }).catch(error => {
-    //         alert('Error...')
-    //         console.log(error)
-    //     });
-    // }, []);
+    const [notis, setNotis] = useState([])
+    const [ques, setQues] = useState([])
+    
+    useEffect(() => {
+        // 최근 공지사항 4개 가져오기
+        axios.get('http://34.64.45.39:8000/Notice/')
+        .then(response => {
+            if (response.data) {
+                const data = [];
+                for (let idx = 0; idx < Math.min(4, response.data.length); idx++){
+                    data.push(response.data[idx])
+                }
+                setNotis(data);
+            } else {
+                alert("공지사항을 가져오는데 실패했습니다.")
+            }
+        }).catch(error => {
+            alert('Error...')
+            console.log(error)
+        });
+        // 최근 질문사항 4개 가져오기
+        axios.get('http://34.64.45.39:8000/Qna/')
+        .then(response => {
+            if (response.data) {
+                const data = [];
+                for (let idx = 0; idx < Math.min(4, response.data.length); idx++){
+                    data.push(response.data[idx])
+                }
+                setQues(data);
+            } else {
+                alert("질문을 가져오는데 실패했습니다.")
+            }
+        }).catch(error => {
+            alert('Error...')
+            console.log(error)
+        });
+    }, []);
 
     const renderNotiItem = (data) => {
         return (
             <div className={styles.renderItemBox}>
-                <Link to={'/DetailNoti'} style={{textDecoration: 'none'}} className={styles.linkStyle}>
+                <Link to={'/DetailNoti'} state={{data:data}} style={{textDecoration: 'none'}} className={styles.linkStyle}>
                     <div className={styles.renderInBox}>
-                        <span className={styles.renderItem}>{data}</span>
+                        <span className={styles.renderItem}>{data.title}</span>
                     </div>
                 </Link>
             </div>
@@ -62,9 +62,9 @@ function Center()
     const renderQuesItem = (data) => {
         return (
             <div className={styles.renderItemBox}>
-                <Link to={'/DetailQues'} style={{textDecoration: 'none'}} className={styles.linkStyle}>
+                <Link to={'/DetailQues'} state={{data:data}} style={{textDecoration: 'none'}} className={styles.linkStyle}>
                     <div className={styles.renderInBox}>
-                        <span className={styles.renderItem}>{data}</span>
+                        <span className={styles.renderItem}>{data.title}</span>
                     </div>
                 </Link>
             </div>

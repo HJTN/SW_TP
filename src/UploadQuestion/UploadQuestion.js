@@ -1,13 +1,15 @@
 import React, { useState, useEffect }from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './UploadQuestion.module.css';
 import { FaChevronLeft } from "react-icons/fa";
 import Navbar from '../Navbar/Navbar';
+import axios from "axios";
 
 function UploadQuestion()
 {
-    const [title, setTitle] = useState('')
-    const [content, setContent] = useState('')
+    const [title, setTitle] = useState('');
+    const [content, setContent] = useState('');
+    const navigate = useNavigate();
 
     const handleTitle = (e) => {
         setTitle(e.target.value)
@@ -18,9 +20,20 @@ function UploadQuestion()
     }
 
     const onClick = () => {
+        axios.post('http://34.64.45.39:8000/Qna/', {
+            title: title,
+            u_id: 'dd',
+            q_content: content,
+            a_content: '',
+        }).then(response => {
+            console.log(response);
+            navigate('/Question')
+        }).catch(error => {
+            alert(error);
+            console.log(error);
+        });
         console.log(title)
         console.log(content)
-        alert(title + '\n' + content);
     }
 
     return (
