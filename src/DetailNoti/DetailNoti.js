@@ -1,16 +1,19 @@
 import React, { useState, useEffect }from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './DetailNoti.module.css';
 import { FaChevronLeft } from "react-icons/fa";
 import Navbar from '../Navbar/Navbar';
 
 function DetailNoti()
 {
-    const [data, setData] = useState({
-        title: '공지 제목...',
-        content: '공지 내용...',
-    });
+    let location = useLocation();
 
+    const [data, setData] = useState({});
+
+    useEffect(() => {
+        setData(location.state.data);
+    }, [location]);
+    
     return (
         <div>
             <div className={styles.Mainbox}>
