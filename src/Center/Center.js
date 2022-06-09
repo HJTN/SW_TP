@@ -11,7 +11,7 @@ function Center()
 {
     const [notis, setNotis] = useState([])
     const [ques, setQues] = useState([])
-
+    
     useEffect(() => {
         // 최근 공지사항 4개 가져오기
         axios.get('http://34.64.45.39:8000/Notice/')
