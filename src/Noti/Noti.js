@@ -5,10 +5,25 @@ import { FaSearch, FaChevronLeft } from "react-icons/fa";
 import Navbar from '../Navbar/Navbar';
 import { List } from 'antd';
 import VirtualList from 'rc-virtual-list';
+import axios from "axios";
 
 function Noti()
 {
-    const [notis, setNotis] = useState(['공지1', '공지2', '공지3', '공지4', '공지5', '공지6','공지7','공지8','공지9','공지10','공지11','공지12'])
+    const [notis, setNotis] = useState([])
+
+    useEffect(() => {
+        axios.get('http://34.64.45.39:8000/Notice/')
+        .then(response => {
+            if (response.data) {
+                setNotis(response.data)
+            } else {
+                alert("공지사항을 가져오는데 실패했습니다.")
+            }
+        }).catch(error => {
+            alert('Error...')
+            console.log(error)
+        });
+    }, []);
 
     return (
         <div>
@@ -26,16 +41,16 @@ function Noti()
             >
                 <VirtualList
                     data={notis}
-                    height={600}
+                    height={750}
                     itemHeight={47}
                     itemKey='Noti'
                 >
                     {(item) => (
                         <List.Item key={item.Noti}>
                             <div className={styles.renderItemBox}>
-                                <Link to={'/DetailNoti'} style={{textDecoration: 'none'}} className={styles.linkStyle}>
+                                <Link to={'/DetailNoti'} state={{data:item}} style={{textDecoration: 'none'}} className={styles.linkStyle}>
                                     <div className={styles.renderInBox}>
-                                        <span className={styles.renderItem}>{item}</span>
+                                        <span className={styles.renderItem}>{item.title}</span>
                                     </div>
                                 </Link>
                             </div>
