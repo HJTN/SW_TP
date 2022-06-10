@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import {useDropzone} from 'react-dropzone';
 import axios from 'axios';
-import { FaSearch, FaChevronLeft } from "react-icons/fa";
+import { FaChevronLeft } from "react-icons/fa";
 import styles from "./UploadPage.module.css";
 import Navbar from '../Navbar/Navbar';
 import { FaPlus } from "react-icons/fa";
@@ -50,16 +50,10 @@ function UploadPage(props)
         <div>
             <div className={styles.Mainbox}>
                 <Link to={'/Main'}>
-                    <div className={styles.backIcon}><FaChevronLeft /></div>
+                    <div className={styles.backIcon}><FaChevronLeft size="27"/></div>
                 </Link>
                 <h2 className={styles.Title}>공유하기</h2>
             </div>
-            <Link to={'/Main'}>
-                <div className={styles.Backicon}><FaChevronLeft /></div>
-            </Link>
-            <Link to={'/Refer'}>
-                <div className={styles.Searchicon}><FaSearch /></div>
-            </Link>
             <br/>
             
             <form onSubmit={(e)=>submit(e)}>

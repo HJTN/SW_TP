@@ -35,7 +35,7 @@
     height: 87px;
     left: 320px;
     align-items: center;
-    top: 28px;
+    top: 25px;
 }
 
 .totalListBox {
@@ -77,15 +77,15 @@
 
 .itemMore{
     position: absolute;
-    width: 65px;
-    height: 20px;
-    right: 30px;
-    top: 20px;
+    width: 80px;
+    height: 25px;
+    left: 290px;
+    top: 90px;
     outline: none;
     border-radius: 5px;
     border: 1px solid #c4c4c4;
     background-color: unset;
     color: #c4c4c4;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
 }

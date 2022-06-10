@@ -14,10 +14,10 @@ function MyInfo({ user })
             <h3 className={styles.userIndex}>사용자이름</h3>
             <h3 className={styles.userId}>{user}</h3>
             <Link to={'/Main'}>
-                <div className={styles.Backicon}><FaChevronLeft /></div>
+                <div className={styles.Backicon}><FaChevronLeft size="27"/></div>
             </Link>
             <Link to={'/Refer'}>
-                <div className={styles.Searchicon}><FaSearch /></div>
+                <div className={styles.Searchicon}><FaSearch size="1.5em" /></div>
             </Link>
             <div className={styles.Userbox}>
                 <div className={styles.Usericon} ><FaRegUser size="90" /></div>
