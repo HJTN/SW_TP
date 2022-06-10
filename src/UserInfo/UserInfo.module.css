@@ -1,0 +1,309 @@
+.Mainbox { 
+    position: absolute;
+    width: 375px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+
+    background: #FFE4E1;
+}
+
+.Title{
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    left: 137px;
+    top: 0px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.165px;
+    
+    color: #000000;
+}
+
+.Backicon{
+    position: absolute;
+    color: #FF897B;
+    width: 240px;
+    height: 87px;
+    left: 28px;
+    align-items: center;
+    top: 28px;
+}
+
+.Searchicon{
+    position: absolute;
+    color: #FF897B;
+    width: 375px;
+    height: 87px;
+    left: 320px;
+    align-items: center;
+    top: 28px;
+}
+
+.Shareicon{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    left: 80px;
+    top: 300px;
+    z-index: 1;
+}
+
+.hearticon{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    left: 170px;
+    top: 300px;
+    z-index: 1;
+}
+
+.alerticon{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    right: 70px;
+    top: 300px;
+    z-index: 1;
+}
+
+.shareindex{
+    position: absolute;
+    width: 80px;
+    height: 12px;
+    left: 67px;
+    top: 340px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.165px;
+    z-index: 1;
+
+    color: #000000;
+}
+
+.heartindex{
+    position: absolute;
+    width: 80px;
+    height: 12px;
+    left: 171px;
+    top: 340px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.165px;
+    z-index: 1;
+
+    color: #000000;
+}
+
+.alertindex{
+    position: absolute;
+    width: 80px;
+    height: 12px;
+    right: 45px;
+    top: 340px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.165px;
+    z-index: 1;
+
+    color: #000000;
+}
+
+.Userbox{
+    position: absolute;
+    width: 375px; 
+    height: 250px; 
+    Top: 70px;
+    background: #F8B2AA;
+}
+
+.Usericon{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    left: 25px;
+    align-items: center;
+    top: 52px;
+}
+
+.userIndex{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    left: 170px;
+    align-items: center;
+    top: 120px;
+    z-index: 1;
+    font-size: 24px;
+}
+
+.userId{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 170px;
+    align-items: center;
+    top: 170px;
+    z-index: 1;
+    font-size: 10px;
+}
+
+.rectangle {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 304px;
+    height: 120px;
+    left: 36px;
+    top: 270px;
+    
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    border: 1px solid #C4C4C4;
+  }
+
+.pwtext{
+    position: absolute;
+    width: 150px;
+    height: 13px;
+    left: 19px;
+    top: 540px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.165px;
+    
+    color: #000000;
+    
+}
+
+.infotext{
+    position: absolute;
+    width: 150px;
+    height: 13px;
+    left: 19px;
+    top: 620px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.165px;
+    
+    color: #000000;
+}
+
+.connecttext{
+    position: absolute;
+    width: 150px;
+    height: 13px;
+    left: 19px;
+    top: 695px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.165px;
+    
+    color: #000000;
+    
+}
+
+.withdrawtext{
+    position: absolute;
+    width: 150px;
+    height: 13px;
+    left: 19px;
+    top: 775px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.165px;
+    
+    color: #000000;
+}
+
+.line3 {
+    position: absolute;
+    width: 375.03px;
+    height: 1.24px;
+    left: 0px;
+    top: 600px;
+    
+    border: 1px solid #FFE4E1;
+    transform: rotate(0.19deg);
+}
+
+.line4 {
+    position: absolute;
+    width: 375.03px;
+    height: 1.24px;
+    left: 0px;
+    top: 680px;
+    
+    border: 1px solid #FFE4E1;
+    transform: rotate(0.19deg);
+}
+
+.line5 {
+    position: absolute;
+    width: 375.03px;
+    height: 1.24px;
+    left: 0px;
+    top: 760px;
+    
+    border: 1px solid #FFE4E1;
+    transform: rotate(0.19deg);
+}

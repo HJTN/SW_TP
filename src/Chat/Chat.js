@@ -1,42 +1,86 @@
-import React, { useState }from 'react'
+import React, { useState, useEffect }from 'react'
 import { Link } from 'react-router-dom';
 import styles from './Chat.module.css';
-import { FaChevronLeft } from "react-icons/fa";
+import { FaChevronLeft, FaRegUser } from "react-icons/fa";
 import Navbar from '../Navbar/Navbar';
 import { List, Input } from 'antd';
 import VirtualList from 'rc-virtual-list';
+import axios from "axios";
 
 function Chat() 
 {
     const [Chats, setChats] = useState([])
+    const [comment, setComment] = useState('')
     const [value, setValue] = useState('')
 
-    const handleClick = () => {
-        if (value.trim().length > 0) {
-            let now = new Date();
-            setChats([...Chats, {
-                content: value,
-                date: `${now.getFullYear()}.${now.getMonth()+1}.${now.getDate()}. ${now.getHours()}:${now.getMinutes()}`,
-            }]);
-            setValue('');
+    useEffect(() => {
+        axios.get('http://34.64.45.39:8000/Comment/')
+            .then(response => {
+                if (response.data) {
+                    setChats(response.data)
+                } else {
+                    alert("댓글을 가져오는데 실패했습니다.")
+                }
+                console.log(response.data)
+            }).catch(error => {
+                console.log(error)
+            });
+    }, [value]);
+
+    const onClick = () => {
+        if (comment.trim().length > 0) {
+            axios.post('http://34.64.45.39:8000/Comment/', {
+                cloth_id: 1,
+                u_id: 'dd',
+                comment: comment,
+            }).then(response => {
+                console.log(response);
+                setValue(comment);
+                setComment('');
+            }).catch(error => {
+                alert(error);
+                console.log(error);
+            });
+            // let now = new Date();
+            // setChats([...Chats, {
+            //     u_id: 'dd',
+            //     comment: comment,
+            //     date: `${now.getFullYear()}.${now.getMonth()+1}.${now.getDate()}. ${now.getHours()}:${now.getMinutes()}`,
+            // }]);
+            // setValue(comment);
+            // setComment('');
         }
     }
 
-    const handleKeyDown = (e) => {
+    const onKeyDown = (e) => {
         if (e.keyCode === 13) {
-            if (value.trim().length > 0) {
-                let now = new Date();
-                setChats([...Chats, {
-                    content: value,
-                    date: `${now.getFullYear()}.${now.getMonth()+1}.${now.getDate()}. ${now.getHours()}:${now.getMinutes()}`,
-                }]);
-                setValue('');
+            if (comment.trim().length > 0) {
+                axios.post('http://34.64.45.39:8000/Comment/', {
+                    cloth_id: 1,
+                    u_id: 'dd',
+                    comment: comment,
+                }).then(response => {
+                    console.log(response);
+                    setValue(comment);
+                    setComment('');
+                }).catch(error => {
+                    alert(error);
+                    console.log(error);
+                });
+                // let now = new Date();
+                // setChats([...Chats, {
+                //     u_id: 'dd',
+                //     comment: comment,
+                //     date: `${now.getFullYear()}.${now.getMonth()+1}.${now.getDate()}. ${now.getHours()}:${now.getMinutes()}`,
+                // }]);
+                // setValue(comment);
+                // setComment('');
             }
         }
     }
     
-    const handleChange = (e) => {
-        setValue(e.target.value);
+    const onChange = (e) => {
+        setComment(e.target.value);
     }
 
     return (
@@ -59,8 +103,10 @@ function Chat()
                     {(item) => (
                         <List.Item key={item.Chat}>
                             <div className={styles.renderItemBox}>
-                                <div className={styles.renderItem}>{item.content}</div>
-                                <div className={styles.renderDate}>{item.date}</div>
+                                <div className={styles.renderUImage}><FaRegUser size='30px' /></div>
+                                <div className={styles.renderUId}>@{item.u_id}</div>
+                                <div className={styles.renderComment}>{item.comment}</div>
+                                <div className={styles.renderDate}>{/*item.date*/}</div>
                             </div>
                         </List.Item>
                     )}
@@ -69,12 +115,12 @@ function Chat()
             <div className={styles.registerBox}>
                 <Input 
                     type={'text'} 
-                    value={value}
-                    onChange={handleChange}
-                    onKeyDown={handleKeyDown}
+                    value={comment}
+                    onChange={onChange}
+                    onKeyDown={onKeyDown}
                     className={styles.registerText}
                 />
-                <button className={styles.registerBtn} onClick={handleClick}>등록</button>
+                <button className={styles.registerBtn} onClick={onClick}>등록</button>
             </div>
             <Navbar />
         </div>

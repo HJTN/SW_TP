@@ -24,6 +24,9 @@ function Main()
         },
         {
             cate: '# 휴가 # 여행',
+        },
+        {
+            cate: '#  # ',
         }
     ])
 
@@ -62,7 +65,7 @@ function Main()
             >
                 <VirtualList
                     data={Products}
-                    height={600}
+                    height={750}
                     itemHeight={47}
                     itemKey='Product'
                 >

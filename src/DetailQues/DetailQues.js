@@ -1,16 +1,18 @@
 import React, { useState, useEffect }from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './DetailQues.module.css';
 import { FaChevronLeft } from "react-icons/fa";
 import Navbar from '../Navbar/Navbar';
 
 function DetailQues()
 {
-    const [data, setData] = useState({
-        title: '질문 제목...',
-        qContent: '질문 내용...',
-        aContent: '답변 내용...',
-    });
+    let location = useLocation();
+
+    const [data, setData] = useState({});
+
+    useEffect(() => {
+        setData(location.state.data);
+    }, [location]);
 
     return (
         <div>
@@ -22,9 +24,9 @@ function DetailQues()
             </div>
             <div type={'text'} className={styles.quesTitle}>{data.title}</div>
             <h4 className={styles.quesContentTitle}>질문 내용</h4>
-            <div className={styles.quesContent}>{data.qContent}</div>
+            <div className={styles.quesContent}>{data.q_content}</div>
             <h4 className={styles.ansContentTitle}>답변 내용</h4>
-            <div className={styles.ansContent}>{data.aContent}</div>
+            <div className={styles.ansContent}>{data.a_content}</div>
             <Navbar />
         </div>
     )

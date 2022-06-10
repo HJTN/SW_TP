@@ -34,6 +34,11 @@ function WishList()
         itemName: '상품이름',
         price: '상품가격',
         period: '대여기간~까지',
+    },{ 
+        title: '----- 글 제목 -----',
+        itemName: '상품이름',
+        price: '상품가격',
+        period: '대여기간~까지',
     }])
     
     const appendData = () => {
@@ -57,7 +62,7 @@ function WishList()
             >
                 <VirtualList
                     data={Cards}
-                    height={600}
+                    height={680}
                     itemHeight={47}
                     itemKey='Card'
                 >

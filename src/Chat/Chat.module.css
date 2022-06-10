@@ -56,10 +56,28 @@
     border-bottom: 1px solid #c4c4c4;
 }
 
-.renderItem{
+.renderUImage{
     position: absolute;
     top: 10px;
     left: 20px;
+
+}
+
+.renderUId{
+    position: absolute;
+    bottom: 5px;
+    left: 24px;
+    width: fit-content;
+    height: fit-content;
+    font-weight: bold;
+    font-size: 8px;
+    text-align: center;
+}
+
+.renderComment{
+    position: absolute;
+    top: 10px;
+    left: 60px;
     height: fit-content;
     font-size: 18px;
     font-weight: bold;
@@ -69,7 +87,7 @@
 .renderDate{
     position: absolute;
     top: 40px;
-    left: 20px;
+    right: 20px;
     height: fit-content;
     color: #c4c4c4;
     font-size: 8px;
