@@ -68,7 +68,6 @@ function Login() {
           <button className={styles.joinBtn}>회원가입</button>
         </Link>
       </form>
-      <UploadPage u_id={u_id} />
     </div>
   );
 }

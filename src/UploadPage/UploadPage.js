@@ -5,8 +5,8 @@ import axios from 'axios';
 import { FaSearch, FaChevronLeft } from "react-icons/fa";
 import styles from "./UploadPage.module.css";
 import Navbar from '../Navbar/Navbar';
-import { BiCloset } from 'react-icons/bi'
-import { AiOutlinePlusCircle } from 'react-icons/ai'
+import { FaPlus } from "react-icons/fa";
+
 
 function UploadPage(props) 
 {
@@ -64,7 +64,8 @@ function UploadPage(props)
             
             <form onSubmit={(e)=>submit(e)}>
                 <button className={styles.registerBtn}>등록</button>
-                <input type="file" name="files" accept="image/jpg,impge/png,image/jpeg,image/gif"/>
+                <label htmlFor="files" className={styles.plusbtn}><FaPlus size="50"/></label>
+                <input type="file" name="files" id="files" accept="image/jpg,impge/png,image/jpeg,image/gif" style={{display : "none"}}/>
                 <input className={styles.registerTitle} name="Title" placeholder="글 제목.." onChange={titleChangeHandler} value={Title}/> 
                 <br />
                 <br />
