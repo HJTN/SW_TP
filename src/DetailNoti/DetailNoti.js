@@ -18,7 +18,7 @@ function DetailNoti()
         <div>
             <div className={styles.Mainbox}>
                 <Link to={'/Noti'} /* 이전 페이지로 이동 구현 필요*/>
-                    <div className={styles.backIcon}><FaChevronLeft /></div>
+                    <div className={styles.backIcon}><FaChevronLeft size="27"/></div>
                 </Link>
                 <h2 className={styles.Title}>공지게시판</h2>
             </div>

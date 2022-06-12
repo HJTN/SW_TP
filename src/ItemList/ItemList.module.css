@@ -128,15 +128,3 @@
     font-size: 14px;
     word-break: break-all;
 }
-
-.renderMore{
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    width: 80px;
-    height: fit-content;
-    text-align: center;
-    color: #FF897B;
-    background-color: unset;
-    border-style: none;
-}

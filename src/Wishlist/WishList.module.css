@@ -13,6 +13,9 @@
     width: 150px;
     height: 30px;
     left: 137px;
+    width: 150px;
+    height: 30px;
+    left: 137px;
     top: 0px;
     
     font-family: 'Roboto';
@@ -35,7 +38,7 @@
     height: 87px;
     left: 28px;
     align-items: center;
-    top: 28px;
+    top: 25px;
 }
 
 .Searchicon{
@@ -45,7 +48,7 @@
     height: 87px;
     left: 320px;
     align-items: center;
-    top: 28px;
+    top: 25px;
 }
 
 .contentTitle{

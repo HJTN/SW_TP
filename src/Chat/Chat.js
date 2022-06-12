@@ -87,7 +87,7 @@ function Chat()
         <div>
             <div className={styles.Mainbox}>
                 <Link to={'/ItemInfo'}>
-                    <div className={styles.backIcon}><FaChevronLeft /></div>
+                    <div className={styles.backIcon}><FaChevronLeft size="27"/></div>
                 </Link>
                 <h2 className={styles.Title}>댓글</h2>
             </div>
