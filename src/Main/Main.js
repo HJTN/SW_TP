@@ -1,6 +1,10 @@
 import React, { useState, useEffect }from 'react'
 import useForm from 'react-hook-form';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+import { Link, useNavigate } from 'react-router-dom';
+>>>>>>> upstream/main
 import styles from './Main.module.css';
 import { FaSearch } from "react-icons/fa";
 import Navbar from '../Navbar/Navbar';

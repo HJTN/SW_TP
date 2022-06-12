@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import styles from './MyInfo.module.css';
 import Navbar from '../Navbar/Navbar';
 import { FaSearch, FaChevronLeft, FaRegUser, FaRegFile, FaBell, FaRegComments, FaRegFilePdf } from "react-icons/fa";
 
-function MyInfo({ user })
+function MyInfo()
 {
     //setU_id(u_id);
     console.log({user})

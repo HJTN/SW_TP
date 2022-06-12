@@ -5,6 +5,7 @@ import styles from "./Join.module.css";
 
 function Join() {
 
+    const navigate = useNavigate();
   const [nickname, setNickname] = useState("")
   const [u_id, setU_id] = useState("")
   const [password, setPassword] = useState("")

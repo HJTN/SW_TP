@@ -1,5 +1,5 @@
 //로그인화면
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from "./Login.module.css";
 import { Route, Routes, Link, useNavigate } from "react-router-dom";
@@ -7,19 +7,28 @@ import MyInfo from "../MyInfo/MyInfo";
 import UploadPage from "../UploadPage/UploadPage";
 
 function Login() {
-  // 기본 로그인
-  const navigate = useNavigate();
-  const [u_id, setU_id] = useState("");
-  const [password, setPassword] = useState("");
-  const [user, setUser] = useState("");
- 
-  const onIdHandler = (e) => {
-    setU_id(e.target.value);
-  }
+    // 기본 로그인
+    const navigate = useNavigate();
+    
+    const [u_id, setU_id] = useState("");
+    const [password, setPassword] = useState("");
+    const [user, setUser] = useState("");
 
-  const onPasswordHandler = (e) => {
-    setPassword(e.target.value);
-  }
+    useEffect(() => {
+        if (window.sessionStorage.length) {
+            window.sessionStorage.clear()
+        } else {
+            console.log("Login parts - ",window.sessionStorage)
+        }
+    },[])
+
+    const onIdHandler = (e) => {
+        setU_id(e.target.value);
+    }
+
+    const onPasswordHandler = (e) => {
+        setPassword(e.target.value);
+    }
 
   const submit = (e) => {
     e.preventDefault();

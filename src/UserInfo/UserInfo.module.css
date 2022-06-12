@@ -175,12 +175,12 @@
 .userId{
     position: absolute;
     width: 100px;
-    height: 100px;
+    height: fit-content;
     left: 170px;
     align-items: center;
     top: 170px;
     z-index: 1;
-    font-size: 10px;
+    font-size: 14px;
 }
 
 .rectangle {

@@ -5,7 +5,11 @@ import axios from 'axios';
 import Navbar from '../Navbar/Navbar';
 import { FaSearch, FaChevronLeft } from "react-icons/fa";
 import { Icon, Col, Card, Row, Carousel } from 'antd';
+<<<<<<< HEAD
 import { position } from 'polished';
+=======
+// import { position } from 'polished';
+>>>>>>> upstream/main
 
 
 function ItemList()
