@@ -85,7 +85,7 @@
 
 .userIcon{
     position: absolute;
-    top: 10px;
+    top: 130px;
     width: 100%;
     height: 60px;
 }
@@ -101,15 +101,15 @@
 
 .itemTitle{
     position: absolute;
-    right: 15px;
-    top: 40px;
+    left: 65px;
+    top: 140px;
     font-size: 18px;
     font-weight: bold;
 }
 
 .itemContent{
     position: absolute;
-    top: 410px;
+    top: 480px;
     left: 30px;
     width: 320px;
     height: fit-content;

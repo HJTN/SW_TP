@@ -1,18 +1,32 @@
-import React, { useState }from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect }from 'react'
+import { Link, useParams } from 'react-router-dom';
+import axios from 'axios';
 import styles from './ItemInfo.module.css';
 import Navbar from '../Navbar/Navbar';
 import { FaChevronLeft, FaRegUser } from "react-icons/fa";
 import { BiCloset } from 'react-icons/bi'
 
-function ItemInfo()
+function ItemInfo(props)
 {
+    let { id } = useParams(); 
     const [numChat, setNumChat] = useState(0)
     const [numInter, setNumInter] = useState(0)
     const [numShow, setNumShow] = useState(0)
+    const [Products, setProducts] = useState([])
 
-    const handleClick = () => {
-        alert('Clicked!')
+    useEffect(()=> {
+
+        getProduct();
+        
+    }, [])
+    
+    const getProduct = (event) => {
+        axios.get(`http://34.64.45.39/Cloth/12/`) // request보낼때, 8개만 보내주라고 body랑 같이 보냄
+        .then(function(response){
+            setProducts(response.data);
+        }).catch(function(event){
+            alert("상품목록을 가져오는데 실패했습니다.");
+        })
     }
     
     return (
@@ -24,18 +38,16 @@ function ItemInfo()
                 </Link>
             </div>
             <div className={styles.Itembox}>
-                <div className={styles.Itemicon} ><BiCloset size='6x' /></div>
-                <div className={styles.itemChangeBtn} onClick={handleClick}></div>
+                <div className={styles.Itemicon} >{<img src={Products.files} />}</div>
             </div>
             <div className={styles.midBox}>
                 <Link to={'/UserInfo'} className={styles.userBox}>
                     <div className={styles.userIcon}><FaRegUser size='50px' /></div>
-                    <div className={styles.userID}>@ID</div>
                 </Link>
-                <div className={styles.itemTitle}>---------- 글 제목 ----------</div>
+                <div className={styles.itemTitle}>{Products.Title}</div>
             </div>
             <div className={styles.itemContent}>
-                의류 상세 정보 작성란...
+                {Products.Description}
             </div>
             <div className={styles.controlBox}>
                 <Link to={'/Chat'} style={{textDecoration: 'none'}} className={styles.controlChat}>
