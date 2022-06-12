@@ -75,7 +75,7 @@ function Center()
         <div>
             <div className={styles.Mainbox}>
                 <Link to={'/Main'}>
-                    <div className={styles.backIcon}><FaChevronLeft /></div>
+                    <div className={styles.backIcon}><FaChevronLeft size="27"/></div>
                 </Link>
                 <h2 className={styles.Title}>고객센터</h2>
             </div>

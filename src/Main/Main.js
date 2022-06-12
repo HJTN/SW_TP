@@ -1,7 +1,6 @@
 import React, { useState, useEffect }from 'react'
 import useForm from 'react-hook-form';
 import { Link } from 'react-router-dom';
-import FileUpload from '../Utils/FileUpload';
 import styles from './Main.module.css';
 import { FaSearch } from "react-icons/fa";
 import Navbar from '../Navbar/Navbar';
@@ -9,82 +8,54 @@ import axios from 'axios';
 import Meta from 'antd/lib/card/Meta';
 import { Card, Row, Col } from 'antd';
 import { List, Input } from 'antd';
-import VirtualList from 'rc-virtual-list';
 
 function Main() 
 {
-    const [Products, setProducts] = useState([
-        {
-            cate: '# 신규 등록 의류',
-        },
-        {
-            cate: '# 봄 # 데일리',
-        },
-        {
-            cate: '# 행사 # 파티',
-        },
-        {
-            cate: '# 휴가 # 여행',
-        },
-        {
-            cate: '#  # ',
-        }
-    ])
+    const [Products, setProducts] = useState([])
 
-    useEffect(() => {
-        axios.post('url', )
-            .then(response => {
-                if(response.data.success) {
-                    setProducts(response.data)
-                } else {
-                    alert("상품들을 가져오는데 실패했습니다.")
-                }
-            })
+    useEffect(()=> {
+
+        getProduct();
+        
     }, [])
+    
+    const getProduct = (event) => {
+        axios.get("http://34.64.45.39:8000/Cloth/") // request보낼때, 8개만 보내주라고 body랑 같이 보냄
+        .then(function(response){
+            setProducts(response.data);
+        }).catch(function(event){
+            alert("상품목록을 가져오는데 실패했습니다.");
+        })
+    }
 
     const renderCards = Products.map((product, index) => {
-
-        return <Col key={index} /* lg={} md={} xs={} 나중에 카드 크기 정의해야함 */>
-            <Card
-                cover={<img src={ 'url' }/>}
+        return <Col key={index}> 
+            <Card className={styles.card}
+                cover = {Products.length > 6 ? <img src={product.files.slice(0,6)}/> : <img src={product.files}/>} //가져온 데이터의 이미지 띄우기
+                title={product.Title}
+                description={product.Description} // 상세정보 
             >
-                <Meta />
             </Card>
         </Col>
-    }) //정보 카드 생성
+    })
 
     return (
         <div>
             <div className={styles.Mainbox}>
                 <h2 className={styles.Title}>NOCS</h2>
                 <Link to={'/Refer'}>
-                    <div className={styles.searchIcon}><FaSearch /></div>
+                    <div className={styles.searchIcon}><FaSearch size="1.5em"/></div>
                 </Link>
-            </div>    
-            <List
-                className={styles.totalListBox}
-            >
-                <VirtualList
-                    data={Products}
-                    height={750}
-                    itemHeight={47}
-                    itemKey='Product'
-                >
-                    {(item) => (
-                        <List.Item key={item.Product}>
-                            <div className={styles.cateBox}>
-                                <div className={styles.itemCate}>{item.cate}</div>                            
-                                <Row className={styles.itemBox}>
-                                    {renderCards}
-                                </Row>
-                                <Link to='/ItemList'>
-                                    <div className={styles.itemMore}>더보기</div>
-                                </Link>
-                            </div>
-                        </List.Item>
-                    )}
-                </VirtualList>
-            </List>
+            </div>  
+
+
+            <Row>
+                {renderCards}
+            </Row>
+                
+            <Link to='/ItemList'>
+                <div className={styles.itemMore}>더보기</div>
+            </Link>
             
             <Navbar />
         </div>

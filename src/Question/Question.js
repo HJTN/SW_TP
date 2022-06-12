@@ -30,11 +30,11 @@ function Question()
         <div>
             <div className={styles.Mainbox}>
                 <Link to={'/Center'} /* 이전 페이지로 이동 구현 필요*/>
-                    <div className={styles.backIcon}><FaChevronLeft /></div>
+                    <div className={styles.backIcon}><FaChevronLeft size="27"/></div>
                 </Link>
                 <h2 className={styles.Title}>질문게시판</h2>
                 <Link to={'/Refer'}>
-                    <div className={styles.searchIcon}><FaSearch /></div>
+                    <div className={styles.searchIcon}><FaSearch size="1.5em"/></div>
                 </Link>
             </div>
             <List
