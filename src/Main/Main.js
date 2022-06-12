@@ -1,6 +1,6 @@
 import React, { useState, useEffect }from 'react'
 import useForm from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './Main.module.css';
 import { FaSearch } from "react-icons/fa";
 import Navbar from '../Navbar/Navbar';
@@ -13,14 +13,14 @@ function Main()
 {
     const [Products, setProducts] = useState([])
 
-    useEffect(()=> {
+    const navigate = useNavigate();
 
+    useEffect(() => {
         getProduct();
-        
-    }, [])
+    }, []);
     
     const getProduct = (event) => {
-        axios.get("http://34.64.45.39:8000/Cloth/") // request보낼때, 8개만 보내주라고 body랑 같이 보냄
+        axios.get("http://34.64.45.39/Cloth/") // request보낼때, 8개만 보내주라고 body랑 같이 보냄
         .then(function(response){
             setProducts(response.data);
         }).catch(function(event){

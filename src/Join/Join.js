@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link, useNavigate } from "react-router-dom";
 import styles from "./Join.module.css";
 
 function Join() {
 
+    const navigate = useNavigate();
   const [nickname, setNickname] = useState("")
   const [u_id, setU_id] = useState("")
   const [password, setPassword] = useState("")
@@ -34,8 +35,8 @@ function Join() {
       u_id: u_id,
       password: password
     }).then(function(response){
-      <Link to={'/JoinFin'}></Link>
-      console.log({u_id}, {password});
+        console.log({ u_id }, { password });
+        navigate('/JoinFin');
     }).catch(function(e){
       alert(e);
       console.log({nickname}, {u_id}, {password});
@@ -80,11 +81,9 @@ function Join() {
         onChange={onPassword2Handler}
       />
       <br></br>
-      <Link to={'/JoinFin'}>
         <button className={styles.Btn}>
             완료
         </button>
-      </Link>
       </form>
     </div>
   );
