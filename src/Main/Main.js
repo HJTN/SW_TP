@@ -1,6 +1,10 @@
 import React, { useState, useEffect }from 'react'
 import useForm from 'react-hook-form';
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+=======
 import { Link, useNavigate } from 'react-router-dom';
+>>>>>>> upstream/main
 import styles from './Main.module.css';
 import { FaSearch } from "react-icons/fa";
 import Navbar from '../Navbar/Navbar';
@@ -13,11 +17,11 @@ function Main()
 {
     const [Products, setProducts] = useState([])
 
-    const navigate = useNavigate();
+    useEffect(()=> {
 
-    useEffect(() => {
         getProduct();
-    }, []);
+        
+    }, [])
     
     const getProduct = (event) => {
         axios.get("http://34.64.45.39/Cloth/") // request보낼때, 8개만 보내주라고 body랑 같이 보냄
@@ -31,7 +35,7 @@ function Main()
     const renderCards = Products.map((product, index) => {
         return <Col key={index}> 
             <Card className={styles.card}
-                cover = {Products.length > 6 ? <img src={product.files.slice(0,6)}/> : <img src={product.files}/>} //가져온 데이터의 이미지 띄우기
+                cover = {Products.length > 6 ? <img src={Products.slice(0,6)}/> : <img src={product.files}/>} //가져온 데이터의 이미지 띄우기
                 title={product.Title}
                 description={product.Description} // 상세정보 
             >

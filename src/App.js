@@ -20,6 +20,7 @@ import ItemList from './ItemList/ItemList';
 import UserInfo from './UserInfo/UserInfo';
 
 function App() {
+
   return (
     <Routes>
         <Route path="/" exact element={<Login />} />
@@ -29,7 +30,7 @@ function App() {
         <Route path="/Main" exact element={<Main />} />
         <Route path="/Refer" exact element={<Refer />} />
         <Route path="/MyInfo" exact element={<MyInfo />} />
-        <Route path="/ItemInfo" exact element={<ItemInfo />} />
+        <Route path="/ItemInfo" exact element={<ItemInfo/>} />
         <Route path="/Center" exact element={<Center />}/>
         <Route path="/Chat" exact element={<Chat />}/>
         <Route path="/Noti" exact element={<Noti />}/>

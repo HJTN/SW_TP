@@ -10,6 +10,7 @@ function Join() {
   const [u_id, setU_id] = useState("")
   const [password, setPassword] = useState("")
   const [password2, setPassword2] = useState("")
+  const navigate = useNavigate();
 
   const onNicknameHandler = (e) => {
     setNickname(e.target.value);
@@ -35,8 +36,8 @@ function Join() {
       u_id: u_id,
       password: password
     }).then(function(response){
-        console.log({ u_id }, { password });
-        navigate('/JoinFin');
+      navigate('/JoinFin');
+      console.log({u_id}, {password});
     }).catch(function(e){
       alert(e);
       console.log({nickname}, {u_id}, {password});
