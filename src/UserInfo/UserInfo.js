@@ -12,13 +12,9 @@ function UserInfo()
     const [u_id, setUId] = useState('temp');
 
     useEffect(() => {
-        console.log(window.sesstionStorage)
-        if (window.sessionStorage.length) {
-            setNickName(window.sessionStorage.getItem('userInfo').nickname);
-            setUId(window.sessionStorage.getItem('userInfo').u_id);
-        }
+        
     }, []);
-    
+
     return(
         <div className={styles.Mainbox}>
             <h2 className={styles.Title}>판매자정보</h2>

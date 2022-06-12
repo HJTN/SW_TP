@@ -9,6 +9,7 @@ import UploadPage from "../UploadPage/UploadPage";
 function Login() {
     // 기본 로그인
     const navigate = useNavigate();
+    
     const [u_id, setU_id] = useState("");
     const [password, setPassword] = useState("");
     const [user, setUser] = useState("");
