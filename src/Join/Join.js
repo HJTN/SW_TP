@@ -36,8 +36,8 @@ function Join() {
       u_id: u_id,
       password: password
     }).then(function(response){
-      navigate('/JoinFin');
-      console.log({u_id}, {password});
+        console.log({ u_id }, { password });
+        navigate('/JoinFin');
     }).catch(function(e){
       alert(e);
       console.log({nickname}, {u_id}, {password});

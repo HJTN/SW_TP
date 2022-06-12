@@ -30,24 +30,40 @@ function Login() {
         setPassword(e.target.value);
     }
 
-  const submit = (e) => {
-    e.preventDefault();
-    axios.post("http://34.64.45.39:8000/User_info/login/", 
-    {
-      u_id: u_id,
-      password: password
-    }).then(function(response){
-      if(response.data){
-        setUser(response.data.u_id);
-        <MyInfo user={user} />
-        navigate('/Main');
-      } else {
-        alert("로그인에 실패했습니다.");
-      }
-    }).catch(function(e){
-      alert(e);
-      console.log({u_id}, {password});
-    })
+    const saveUserInfo = (nickname, u_id) => {
+        const userInfo = {
+            nickname: nickname,
+            user_id: u_id,
+        };
+        window.sessionStorage.setItem('userInfo', JSON.stringify(userInfo));
+    };
+    
+    const submit = (e) => {
+        e.preventDefault();
+        axios.post("http://34.64.45.39/User_info/login/",
+            {
+                u_id: u_id,
+                password: password
+            }).then(function (response) {
+                if (response.data) {
+                    axios.get('http://34.64.45.39:8000/User_info/login/')
+                        .then(response => {
+                            response.data.map((info) => {
+                                if (info.u_id === u_id) {
+                                    saveUserInfo(info.nickname, info.u_id);
+                                }
+                            })
+                        }).catch(error => {
+                            console.log(error);
+                        });
+                    navigate('/Main');
+                } else {
+                    alert("로그인에 실패했습니다.");
+                }
+            }).catch(function (e) {
+                alert(e);
+                console.log({ u_id }, { password });
+            });
   }
 
   return (

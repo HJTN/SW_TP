@@ -196,22 +196,24 @@
 
 .userIndex{
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: fit-content;
+    height: fit-content;
     left: 170px;
     align-items: center;
     top: 120px;
     z-index: 1;
+    font-size: 24px;
 }
 
 .userId{
     position: absolute;
     width: 100px;
-    height: 100px;
-    left: 195px;
+    height: fit-content;
+    left: 170px;
     align-items: center;
-    top: 150px;
+    top: 170px;
     z-index: 1;
+    font-size: 14px;
 }
 
 .rectangle {

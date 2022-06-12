@@ -6,13 +6,23 @@ import { FaSearch, FaChevronLeft, FaRegUser, FaRegFile, FaBell, FaRegComments, F
 
 function MyInfo()
 {
-    //setU_id(u_id);
-    console.log({user})
+    const [nickname, setNickName] = useState('사용자이름');
+    const [u_id, setUId] = useState('temp');
+
+    useEffect(() => {
+        console.log(window.sessionStorage)
+        if (window.sessionStorage.length) {
+            const userInfo = JSON.parse(window.sessionStorage.userInfo);
+            setNickName(userInfo.nickname);
+            setUId(userInfo.user_id);
+        }
+    }, [])
+
     return(
         <div className={styles.Mainbox}>
             <h2 className={styles.Title}>내정보</h2>
-            <h3 className={styles.userIndex}>사용자이름</h3>
-            <h3 className={styles.userId}>{user}</h3>
+            <h3 className={styles.userIndex}>{nickname}</h3>
+            <h3 className={styles.userId}>회원번호: {u_id}</h3>
             <Link to={'/Main'}>
                 <div className={styles.Backicon}><FaChevronLeft size="27"/></div>
             </Link>
