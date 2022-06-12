@@ -10,6 +10,7 @@ function Join() {
   const [u_id, setU_id] = useState("")
   const [password, setPassword] = useState("")
   const [password2, setPassword2] = useState("")
+  const navigate = useNavigate();
 
   const onNicknameHandler = (e) => {
     setNickname(e.target.value);

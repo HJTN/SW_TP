@@ -128,3 +128,12 @@
     font-size: 14px;
     word-break: break-all;
 }
+
+.card{
+    position: relative;
+    width: 50px;
+    height: 420px;
+    top: 145px;
+    font-family: 'Roboto';
+    font-size: 20px;
+}

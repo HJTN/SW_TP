@@ -38,43 +38,6 @@
     top: 25px;
 }
 
-.totalListBox {
-    position: absolute;
-    top: 70px;
-    left: 0px;
-    width: 375px;
-    height: fit-content;
-    list-style: none;
-}
-
-.cateBox{
-    position: relative;
-    top: 0px;
-    left: 0px;
-    width: 373px;
-    height: 160px;
-    border: 1px solid #FF897B;
-}
-
-.itemCate{
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: fit-content;
-    height: fit-content;
-    font-size: 18px;
-    font-weight: bold;
-    color: grey;
-}
-
-.itemBox{
-    position: absolute;
-    top: 60px;
-    left: 20px;
-    width: 320px;
-    height: 80px;
-}
-
 .itemMore{
     position: absolute;
     width: 80px;
@@ -88,4 +51,13 @@
     color: #c4c4c4;
     font-size: 16px;
     text-align: center;
+}
+
+.card{
+    position: relative;
+    width: 50px;
+    height: 420px;
+    top: 145px;
+    font-family: 'Roboto';
+    font-size: 20px;
 }

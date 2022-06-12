@@ -31,7 +31,7 @@ function Main()
     const renderCards = Products.map((product, index) => {
         return <Col key={index}> 
             <Card className={styles.card}
-                cover = {Products.length > 6 ? <img src={product.files.slice(0,6)}/> : <img src={product.files}/>} //가져온 데이터의 이미지 띄우기
+                cover = {Products.length > 6 ? <img src={Products.slice(0,6)}/> : <img src={product.files}/>} //가져온 데이터의 이미지 띄우기
                 title={product.Title}
                 description={product.Description} // 상세정보 
             >
