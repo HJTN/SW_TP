@@ -5,6 +5,7 @@ import axios from 'axios';
 import Navbar from '../Navbar/Navbar';
 import { FaSearch, FaChevronLeft } from "react-icons/fa";
 import { Icon, Col, Card, Row, Carousel } from 'antd';
+import { position } from 'polished';
 
 
 function ItemList()
@@ -27,7 +28,7 @@ function ItemList()
     }
 
     const renderCards = Products.map((product, index) => {
-        return <Col key={index}> 
+        return <Col key={index} style={{}}> 
             <Card className={styles.card}
                 cover = {<img src={product.files} />} //가져온 데이터의 이미지 띄우기, 
                 title={product.Title}
