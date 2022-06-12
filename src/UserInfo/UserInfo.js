@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import styles from './UserInfo.module.css';
 import Navbar from '../Navbar/Navbar';
@@ -6,16 +6,24 @@ import { FaSearch, FaChevronLeft, FaRegUser, FaRegFile } from "react-icons/fa";
 import { RiHeartsLine } from 'react-icons/ri'
 import { HiOutlineSpeakerphone} from 'react-icons/hi'
 
-function UserInfo({ user })
+function UserInfo()
 {
-    //setU_id(u_id);
+    const [nickname, setNickName] = useState('사용자이름');
+    const [u_id, setUId] = useState('temp');
+
+    useEffect(() => {
+        console.log(window.sesstionStorage)
+        if (window.sessionStorage.length) {
+            setNickName(window.sessionStorage.getItem('userInfo').nickname);
+            setUId(window.sessionStorage.getItem('userInfo').u_id);
+        }
+    }, []);
     
-    console.log({user});
     return(
         <div className={styles.Mainbox}>
             <h2 className={styles.Title}>판매자정보</h2>
-            <h3 className={styles.userIndex}>사용자이름</h3>
-            <h3 className={styles.userId}>회원번호: {user}</h3>
+            <h3 className={styles.userIndex}>{nickname}</h3>
+            <h3 className={styles.userId}>회원번호: {u_id}</h3>
             <Link to={'/ItemInfo'}>
                 <div className={styles.Backicon}><FaChevronLeft /></div>
             </Link>

@@ -1,19 +1,6 @@
 const { createProxyMiddleware } = require('http-proxy-middleware')
  
 module.exports = (app) => {
-    // Using in Server
-    app.use(
-        createProxyMiddleware(
-            ['/http://localhost/'],
-            {
-                target: 'http://34.64.183.164/',
-                changeOrigin: true,
-                pathRewrite: {
-                    '^/http://localhost/': ''
-                },
-            }            
-        )
-    );
     // Chat
     app.use(
         createProxyMiddleware(
